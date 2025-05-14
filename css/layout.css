@@ -1,0 +1,312 @@
+/* --- Header & Navigation --- */
+header {
+    /* Default state (at top) */
+    background-color: transparent; /* <<< Make background clear initially */
+    backdrop-filter: none;         /* <<< No blur initially */
+    color: #f0f0f0;                /* Keep text light */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: none;             /* <<< No shadow initially */
+    border-bottom: 1px solid transparent; /* <<< Transparent border initially */
+    /* Add transitions for a smooth change */
+    transition: background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+header.header-scrolled {
+    background-color: rgba(20, 20, 40, 0.85); /* Darker semi-transparent background */
+    /* Apply blur - add prefix for Safari */
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Add shadow */
+    border-bottom: 1px solid #333; /* Add border */
+}
+
+/* --- Main Content Area --- */
+main {
+    /* Remove or change background-color if you want body background to show through */
+    background-color: transparent; /* Or a very dark color like #1a1a2e */
+    z-index: 1;
+    width: 80%;
+    max-width: 960px;
+    margin: 80px auto 20px auto; /* Increase top margin due to fixed header */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: none; /* Remove shadow if background is transparent */
+    /* border: 1px solid #444; */ /* Optional: subtle border instead */
+}
+
+/* --- Section Styling --- */
+section {
+    padding: 40px 0;        /* Vertical padding within each section */
+    margin-bottom: 20px;    /* Space below each section */
+    border-bottom: 1px solid #333; /* Light separator line */
+}
+
+section:last-of-type {
+    border-bottom: none;    /* Remove border from the last section */
+    margin-bottom: 0;
+}
+
+#hero {
+    text-align: center;     /* Center text in the hero section */
+    border-bottom: none;    /* No line needed after hero usually */
+    padding-top: 20px;      /* Less padding at the very top inside main */
+}
+
+#hero h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;       /* Make main heading larger */
+}
+
+#hero p {
+    font-size: 1.1em;
+    color: #dcdcdc;
+}
+
+/* --- Headings --- */
+h2 {
+    margin-bottom: 20px;    /* Space below section headings */
+    color: #a78bfa; /* << Purple accent for headings */
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: 10px;    /* Space below project titles */
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #aaa;
+    z-index: 1;
+}
+
+/* --- VCE Subject Page Spacing & HR Styling --- */
+
+/* Target the main section on subject pages */
+#spec-maths-resources,
+#physics-resources,
+#chem-resources,
+#eng-resources {
+    /* Add bottom padding for space before footer */
+    padding-bottom: 40px;
+}
+
+/* Adjust intro paragraph spacing */
+#spec-maths-resources > p:first-of-type,
+#physics-resources > p:first-of-type,
+#chem-resources > p:first-of-type,
+#eng-resources > p:first-of-type {
+    text-align: center;
+    margin-bottom: 40px; /* Increased space below intro paragraph */
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7; /* Slightly more line spacing for intro */
+}
+
+/* Style the hr element */
+#spec-maths-resources hr,
+#physics-resources hr,
+#chem-resources hr,
+#eng-resources hr {
+    border: none; /* Remove default border */
+    border-top: 1px solid #444; /* Subtle line for dark theme */
+    margin: 50px auto; /* Increased vertical margin, auto centers */
+    width: 70%;        /* Make it less than full width */
+}
+
+/* Adjust h3 subheading spacing */
+#spec-maths-resources h3,
+#physics-resources h3,
+#chem-resources h3,
+#eng-resources h3 {
+    color: #e0e0e0;
+    margin-top: 45px;     /* Increased space ABOVE subheading (except first) */
+    margin-bottom: 20px;  /* Increased space BELOW subheading */
+    padding-bottom: 8px;
+    border-bottom: 1px solid #555;
+    text-align: left;
+    font-size: 1.4em; /* Slightly larger subheading */
+}
+
+/* Keep rule for first h3 */
+#spec-maths-resources h3:first-of-type,
+#physics-resources h3:first-of-type,
+#chem-resources h3:first-of-type,
+#eng-resources h3:first-of-type {
+    margin-top: 0; /* Ensure no top margin on the first subheading */
+}
+
+/* Adjust resource list spacing */
+.resource-list {
+    list-style: none;
+    padding-left: 0; /* Remove default padding if using ::before icon */
+    margin-top: 0; /* Remove any extra space above list */
+    margin-bottom: 15px; /* Space below the whole list */
+}
+
+.resource-list li {
+    margin-bottom: 18px; /* Increased space BETWEEN list items */
+    padding-left: 30px;
+    position: relative;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+/* Adjust icon positioning slightly if needed */
+.resource-list li::before {
+    content: '\f019'; /* Font Awesome download icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0px;
+    top: 3px; /* Adjust vertical alignment */
+    color: #a78bfa;
+    font-size: 1em;
+}
+/* --- End VCE Subject Page Styling --- */
+
+/* --- Custom 404 Page Styling (Updated for 2-column layout) --- */
+#custom-404-page {
+    display: flex;              /* Enable Flexbox */
+    flex-wrap: wrap;            /* Allow items to wrap on smaller screens */
+    justify-content: space-around; /* Distribute space around items */
+    align-items: center;        /* Vertically center items */
+    min-height: 90vh; /* calc(80vh - 100px); !* Adjust min-height as needed *!*/
+    padding: 40px 5%;           /* Use percentage for side padding */
+    gap: 30px;                  /* Space between the text and image columns */
+    color: #dcdcdc;
+}
+
+.error-text-content {
+    flex: 1 1 45%; /* Flex properties: grow, shrink, basis (text takes up roughly half) */
+    min-width: 300px; /* Minimum width before wrapping */
+    text-align: left;  /* <<< Text aligned left for this column */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items (like button) to the start (left) */
+}
+
+.error-image-container {
+    flex: 1 1 45%; /* Image container also takes up roughly half */
+    min-width: 300px;
+    display: flex;
+    justify-content: center; /* Center image within its container */
+    align-items: center;
+}
+
+.error-page-image-new {
+    max-width: 650px;   /* << INCREASED IMAGE SIZE (adjust as needed) */
+    width: 100%;        /* Make it responsive within its container */
+    height: auto;
+    display: block;
+}
+
+/* Text element styling within the left column */
+#custom-404-page .error-code,
+#custom-404-page .error-tagline,
+#custom-404-page .error-description,
+#custom-404-page .redirect-message {
+    text-align: left;   /* Ensure these inherit left alignment */
+    width: 100%;        /* Make them take full width of .error-text-content */
+}
+
+#custom-404-page .error-code {
+    font-size: clamp(4.5em, 16vw, 9em); /* Responsive large "404" */
+    font-weight: bold;
+    color: #e8e8e8;
+    margin-bottom: 0px;
+    line-height: 1;
+}
+
+#custom-404-page .error-tagline {
+    font-size: clamp(1.2em, 4vw, 1.8em);
+    color: #ccc;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+#custom-404-page .error-description {
+    font-size: 1.1em;
+    color: #bbb;
+    margin-bottom: 25px;
+    max-width: 100%; /* Full width of text container */
+    line-height: 1.7;
+}
+
+#custom-404-page .redirect-message {
+    font-size: 1em;
+    color: #aaa;
+    margin-bottom: 30px; /* Increased space before button */
+}
+
+#custom-404-page .redirect-message strong#countdown-timer {
+    color: #a78bfa;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.take-me-home {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: #a78bfa;
+    color: #0f0f24;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 0; /* Removed top margin as parent flex handles spacing now */
+    /* align-self: flex-start; is handled by parent .error-text-content */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.take-me-home:hover {
+    background-color: #c4b0ff;
+    color: #0a0a1a;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Media Query for smaller screens to stack them */
+@media (max-width: 768px) {
+    #custom-404-page {
+        flex-direction: column; /* Stack text on top of image */
+    }
+
+    .error-text-content {
+        order: 2; /* Text appears below image */
+        align-items: center; /* Center items in the text block when stacked */
+        text-align: center; /* Center text content when stacked */
+        margin-top: 30px;
+    }
+    .error-image-container {
+        order: 1; /* Image appears on top */
+        width: 100%; /* Allow image container to be full width */
+    }
+
+    #custom-404-page .error-code,
+    #custom-404-page .error-tagline,
+    #custom-404-page .error-description,
+    #custom-404-page .redirect-message {
+        text-align: center; /* Re-center text when stacked */
+    }
+    .take-me-home {
+        align-self: center; /* Center button when stacked */
+    }
+    .error-page-image-new {
+        max-width: 220px; /* Maybe slightly smaller image on mobile */
+    }
+}
