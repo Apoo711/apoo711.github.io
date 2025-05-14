@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: Blog
+permalink: /blog/index.html
+templateEngineOverride: njk, md
+---
+
+<section id="blog-list">
+    <h2>Blog</h2>
+    <p style="text-align: center; margin-bottom: 40px;">
+        Welcome! Here I might share thoughts on projects, technology, VCE experiences, or anything else I find interesting.
+    </p>
+    <hr style="border: none; border-top: 1px solid #444; margin: 40px auto; width: 70%;">
+
+    <div class="blog-post-list">
+        {# Loop through all items tagged 'post', newest first #}
+        {%- for post in collections.post | reverse -%}
+            <article class="blog-post-item">
+                <h3><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+
+                {% if post.date %} {# Check if date exists #}
+                <p class="post-meta">
+                    Published on <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+                </p>
+                {% endif %}
+
+                {# Use excerpt if defined in front matter, otherwise show start of content #}
+                {% if post.data.excerpt %}
+                   <p class="post-excerpt">{{ post.data.excerpt }}</p>
+                {% elif post.templateContent %}
+                    {# Display first part of content as excerpt #}
+                    <p class="post-excerpt">{{ post.templateContent | safe | truncate(150) }}...</p>
+                {% endif %}
+
+                <a href="{{ post.url | url }}" class="read-more-link">Read More &rarr;</a>
+            </article> {%- else -%}
+            <p>No blog posts published yet.</p>
+        {%- endfor -%}
+    </div>
+</section>

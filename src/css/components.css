@@ -1,0 +1,342 @@
+/* --- Skills Accordion Styling --- */
+#about h3 { /* Style the main "Skills" heading if needed */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.skill-category {
+    margin-bottom: 10px;        /* Space below each category box */
+    border: 1px solid #444;
+    border-radius: 4px;         /* Slightly rounded corners */
+    background-color: #1a1a2e;  /* Dark background */
+    overflow: hidden;           /* Prevents content overflow issues */
+}
+
+.skill-category summary {
+    padding: 12px 15px;         /* Padding inside the clickable title */
+    font-weight: bold;
+    cursor: pointer;            /* Makes it look clickable */
+    outline: none;              /* Removes default focus outline */
+    background-color: #2a2a3a;  /* Background for the title bar */
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+    border-bottom: 1px solid #444; /* Darker border when closed */
+    /* Ensure summary behaves like a block */
+    text-align: center;
+    display: block;
+}
+
+.skill-category summary:hover {
+    background-color: #3a3a4a;  /* Darker background on hover */
+}
+
+/* Style the default arrow marker (optional) */
+.skill-category summary::marker { /* Standard way */
+    /* You could change color, etc. */
+    /* color: #007bff; */
+}
+.skill-category summary::-webkit-details-marker { /* For Chrome/Safari */
+    /* Style the default arrow specifically */
+}
+
+/* Style the list inside the details */
+.skill-category ul {
+    list-style: disc;           /* Use standard bullet points */
+    margin: 15px 0 15px 35px;   /* Add margin/indentation for the list */
+    padding-right: 15px;        /* Ensure padding on the right too */
+}
+
+.skill-category ul li::marker { /* Style the bullet points */
+    color: #a78bfa; /* Purple bullets */
+}
+
+/* Optional: Add padding directly when details is open */
+.skill-category[open] {
+    padding-bottom: 5px; /* Add a little space at the bottom when open */
+}
+
+/* Optional: Remove border below summary when open */
+.skill-category[open] summary {
+    border-bottom: none; /* Add a line when open */
+    margin-bottom: 10px; /* Add space below summary when open */
+}
+
+/* --- Project Section CSS --- */
+
+/* Optional: Use CSS Grid for a multi-column layout */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 25px; /* Space between project cards */
+}
+
+.project-item {
+    background-color: rgba(26, 26, 46, 0.7); /* Slightly different background for project items */
+    color: #dcdcdc;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Slightly lift card on hover */
+}
+
+.project-item h3 {
+    margin-top: 0;
+    color: #e8e8e8;
+    margin-bottom: 10px;
+}
+
+/* Style for project links */
+.project-links a {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 10px;       /* Space above links */
+    text-decoration: none;
+    color: #a78bfa;         /* Link color */
+    font-weight: 600;       /* Slightly bolder */
+    padding-bottom: 3px;    /* Space for border */
+    border-bottom: 2px solid transparent; /* Prepare for hover effect */
+    transition: border-color 0.2s ease-in-out;
+}
+
+.project-links a:hover {
+    border-bottom-color: #a78bfa; /* Underline effect on hover */
+}
+
+/* Optional: Style for technology tags */
+.project-tags {
+    margin-top: 15px;
+}
+
+.project-tags span {
+    display: inline-block;
+    background-color: #2a2a3a; /* Light grey tag background */
+    color: #ccc;            /* Darker grey text */
+    padding: 4px 12px;         /* Tag padding */
+    border-radius: 15px;       /* Pill shape */
+    font-size: 0.8em;
+    font-weight: 500;
+    margin-right: 6px;
+    margin-bottom: 6px;       /* Allow tags to wrap */
+}
+
+.project-image {
+    width: 100%;           /* Make image fill container width */
+    height: 200px;         /* << SET A FIXED HEIGHT (e.g., 200px - adjust as needed) */
+    object-fit: contain;   /* << CONTROL HOW IMAGE FITS */
+    /* --- Choose ONE object-fit value --- */
+    /* object-fit: cover; */   /* Scales image to cover the box, may crop parts */
+    /* object-fit: contain; */ /* Scales image to fit entirely inside, may add whitespace */
+    /* object-fit: scale-down; */ /* Like 'contain' but won't upscale small images */
+
+    /* Keep other styles */
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #1a1a2e; /* Optional: Add a subtle background for 'contain' */
+}
+
+#projects > p:first-of-type {
+    text-align: center;
+    margin-bottom: 25px; /* Add margin below it before the project cards */
+}
+
+.project-item.inactive-project {
+    opacity: 0.75; /* Make it slightly faded */
+    /* background-color: #f5f5f5; */ /* Optional: Slightly duller background */
+    /* border-style: dashed; */ /* Optional: Dashed border */
+}
+
+.project-item.inactive-project:hover {
+    /* Optional: Reduce hover effect for inactive projects */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transform: translateY(0); /* No lift on hover */
+    opacity: 0.85; /* Slightly less faded on hover */
+}
+
+.project-item.inactive-project .project-image {
+    /* filter: grayscale(80%); */ /* Optional: Make image grayscale */
+}
+/* --- End of Inactive Project CSS --- */
+
+#contact p {
+    margin-bottom: 25px; /* More space after paragraph */
+    text-align: center; /* Center the intro text */
+}
+
+.contact-methods {
+    display: flex;          /* Arrange items horizontally */
+    justify-content: center; /* Center items on the line */
+    align-items: center;    /* Align items vertically */
+    flex-wrap: wrap;        /* Allow wrapping on small screens */
+    gap: 20px;              /* Space between items */
+    padding: 10px 0;        /* Add some padding */
+}
+
+.contact-link-item {
+    display: inline-flex;   /* Align icon and text inline */
+    align-items: center;    /* Vertically align icon and text */
+    text-decoration: none;
+    color: #ccc;            /* Slightly darker text */
+    background-color: #2a2a3a; /* Light background "button" */
+    padding: 10px 18px;     /* Padding inside the button */
+    border: 1px solid #444;
+    border-radius: 20px;    /* Pill shape */
+    transition: all 0.3s ease; /* Smooth transitions */
+    font-weight: 500;
+}
+
+.contact-link-item:hover {
+    background-color: #3a3a4a; /* Slightly darker on hover */
+    color: #a78bfa;         /* Blue text/icon on hover */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add shadow on hover */
+    border-color: #555; /* Add border on hover */
+}
+
+.contact-link-item i { /* Style for the icons */
+    margin-right: 8px;     /* Space between icon and text */
+    font-size: 1.2em;      /* Make icon slightly larger */
+    color: #aaa;           /* Default icon color */
+    transition: color 0.3s ease; /* Transition icon color */
+}
+
+.contact-link-item:hover i {
+    color: #a78bfa;          /* Match text hover color */
+}
+
+/* Specific style for non-link Discord item */
+.contact-discord {
+    cursor: default; /* Show default cursor, not pointer */
+}
+.contact-discord:hover {
+    /* Prevent hover effects for non-links */
+    background-color: #2a2a3a; /* Keep original background */
+    color: #ccc; /* Keep original text color */
+    transform: translateY(0);
+    box-shadow: none;
+    border-color: #444;
+}
+.contact-discord:hover i {
+    color: #aaa; /* Keep original icon color */
+}
+
+/* --- End of Contact Section CSS --- */
+
+/* --- VCE Landing Page Subject Links --- */
+.subject-link-container {
+    display: flex;          /* Arrange links horizontally */
+    flex-wrap: wrap;        /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the links */
+    gap: 20px;              /* Space between links */
+    margin-top: 30px;       /* Space above the links */
+    padding: 0 10px;        /* Ensure some padding on sides */
+}
+
+.subject-link-item {
+    display: block;         /* Make link a block element */
+    padding: 15px 30px;     /* Padding inside link */
+    background-color: #2a2a3a; /* Dark background */
+    color: #e8e8e8;         /* Light text */
+    text-decoration: none;
+    border-radius: 6px;     /* Rounded corners */
+    border: 1px solid #444; /* Subtle border */
+    font-weight: 500;
+    text-align: center;
+    min-width: 180px;       /* Give buttons a minimum width */
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.subject-link-item:hover {
+    background-color: #3a3a4a;  /* Lighter background on hover */
+    color: #a78bfa;          /* Purple accent text on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+/* --- End VCE Subject Links --- */
+
+/* Add to appropriate CSS file (e.g., components.css or new blog.css) */
+
+/* Find this rule and update it */
+.blog-post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.blog-post-item {
+    background-color: rgba(26, 26, 46, 0.85);
+    border: 1px solid #444;
+    border-radius: 8px; /* Slightly larger radius */
+    padding: 25px 30px; /* Adjust padding */
+    color: #dcdcdc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Added border-color */
+}
+
+.blog-post-item:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* More pronounced shadow */
+    border-color: #555; /* Slightly lighter border on hover */
+}
+
+.blog-post-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Increased space below title */
+    font-size: 1.7em;   /* Slightly larger title */
+    text-align: left;
+    border-bottom: none;
+}
+
+.blog-post-item h3 a {
+    color: #e8e8e8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.blog-post-item h3 a:hover {
+    color: #a78bfa; /* Purple accent */
+}
+
+.post-meta {
+    font-size: 0.85em;
+    color: #aaa;
+    margin-bottom: 18px; /* More space after meta */
+    font-style: italic;
+}
+
+.post-excerpt {
+    font-size: 1em;
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 20px; /* More space after excerpt */
+    flex-grow: 1; /* Allows excerpt to take up space if card heights vary */
+}
+
+.read-more-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #a78bfa;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    margin-top: auto; /* Pushes link to bottom */
+    padding: 8px 15px; /* Make it more button-like */
+    border-radius: 20px; /* Pill shape for link */
+    background-color: rgba(167, 139, 250, 0.1); /* Subtle background for the link */
+    align-self: flex-start;
+}
+
+.read-more-link:hover {
+    /* text-decoration: underline; */ /* Optional */
+    background-color: rgba(167, 139, 250, 0.25); /* Darker background on hover */
+    color: #c4b0ff; /* Lighter purple on hover */
+    transform: translateX(3px) translateY(-1px); /* Slight move and lift */
+}

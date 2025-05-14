@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title | default("Aryan Gupta - Portfolio") }}</title>
+    <link rel="stylesheet" href="/css/okaidia.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/navigation.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" ... />
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <header>
+        <nav>
+            <div class="logo"><a href="/">AG</a></div>
+            <ul class="nav-links">
+                <li><a href="/#about"><i class="fa-solid fa-user"></i> About</a></li>
+                <li><a href="/#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+                <li><a href="/vce/"><i class="fa-solid fa-book-open"></i> VCE Resources</a></li>
+                <li><a href="/#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                <li><a href="/blog/"><i class="fa-solid fa-blog"></i> Blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <footer>
+        <p>&copy; {% year %} Aryan Gupta. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="/js/particles-config.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

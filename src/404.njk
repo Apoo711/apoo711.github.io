@@ -1,0 +1,43 @@
+---
+layout: 'minimal-layout.njk'
+title: Page Not Found (404) - Aryan Gupta
+permalink: /404.html
+eleventyExcludeFromCollections: true
+---
+
+<section id="custom-404-page">
+    <div class="error-text-content">
+        <h1 class="error-code">404</h1>
+        <p class="error-tagline">YOU SEEM TO BE LOST...</p>
+        <p class="error-description">
+            The page you're looking for might have been abducted by aliens, moved to a different galaxy,
+            or perhaps it never existed in this dimension. Don't worry though, it happens to the best of us!
+        </p>
+        <p class="redirect-message">
+            We'll try to beam you back to the homepage in <strong id="countdown-timer">{{ countdownStartValue | default(10) }}</strong> seconds...
+        </p>
+        <a href="/" class="error-page-link take-me-home">TAKE ME HOME</a>
+    </div>
+    <div class="error-image-container">
+        {# Ensure your image path is correct and it's in src/images/ #}
+        <img src="/images/satellite.png" alt="Lost in space illustration" class="error-page-image-new">
+    </div>
+</section>
+
+{# Keep your existing countdown JavaScript #}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let countdownElement = document.getElementById('countdown-timer');
+    if (countdownElement) {
+        let seconds = parseInt(countdownElement.textContent) || 10;
+        let countdownInterval = setInterval(function() {
+            seconds--;
+            countdownElement.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = '/'; // Redirect to homepage
+            }
+        }, 1000); // Update every second
+    }
+});
+</script>
