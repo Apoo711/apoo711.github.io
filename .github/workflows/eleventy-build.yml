@@ -1,0 +1,48 @@
+name: Eleventy Build and Deploy
+
+on:
+  push:
+    branches:
+      - main # Or master, or whichever branch your source code is on
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use the Node.js version you use locally (e.g., 20.x)
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci # 'ci' is generally preferred for CI environments
+
+      - name: Build with Eleventy
+        run: npm run build # This runs 'eleventy' which outputs to the 'docs' folder
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs # Directory that Eleventy builds to
+          # For a User/Organization page (like <username>.github.io):
+          # The 'gh-pages' branch is typically used for Project Pages.
+          # For User Pages, you often push the build output back to the 'main' branch's '/docs' folder
+          # OR to a dedicated 'gh-pages' branch that is then set as the source.
+          #
+          # If your repo is <username>.github.io and GitHub Pages is set to deploy from 'main' /docs:
+          # You need an action that commits the 'docs' folder back to the 'main' branch.
+          # The peaceiris/actions-gh-pages action often deploys to a separate 'gh-pages' branch by default.
+          #
+          # Let's adjust for pushing the 'docs' folder contents to the 'gh-pages' branch,
+          # and then you'll set GitHub Pages to deploy from 'gh-pages' branch /root.
+          # This keeps your 'main' branch for source code only.
+          publish_branch: gh-pages # Deploy to the gh-pages branch
+          # user_name: 'github-actions[bot]' # Optional
+          # user_email: 'github-actions[bot]@users.noreply.github.com' # Optional
+          # commit_message: 'Deploy Eleventy site to Pages' # Optional
