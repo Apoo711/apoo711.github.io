@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 </head>
@@ -120,54 +121,39 @@
 
     <section id="projects">
         <h2>My Projects</h2>
-        <p><b>Here's a selection of projects I've worked on.</b></p>
+        <p>Here's a selection of my projects.</p>
 
-        <div class="projects-container">
-            <article class="project-item">
-                <img src="images/obsidian-discordrpc-preview.png" alt="Obsidian Discord RPC Plugin" class="project-image">
-
-                <h3>Discord RPC for Obsidian</h3>
-
-                <p>
-                    An Obsidian plugin to display your current note activity in Discord using Rich Presence. Built using Typescript.
-                </p>
-
-                <div class="project-links">
-                    <a href="https://github.com/Apoo711/obsidian-discordrpc" target="_blank" rel="noopener noreferrer">Source Code</a>
+        <div class="project-slider-container">
+            <div class="project-slider">
+                <div class="project-item">
+                    <img src="/images/obsidian-discordrpc-preview.png" alt="Obsidian Discord RPC Plugin" class="project-image">
+                    <h3>Discord RPC for Obsidian</h3>
+                    <p>An Obsidian plugin to display current note activity in Discord using Rich Presence. Built using TypeScript.</p>
+                    <div class="project-links"><a href="https://github.com/Apoo711/obsidian-discordrpc" target="_blank" rel="noopener noreferrer">Source Code</a></div>
+                    <div class="project-tags"><span>Obsidian</span><span>Plugin</span><span>TypeScript</span></div>
                 </div>
-
-                <div class="project-tags">
-                    <span>Obsidian</span>
-                    <span>Plugin</span>
-                    <span>TypeScript</span>
-                    <span>Discord</span>
+                <div class="project-item inactive-project">
+                    <img src="/images/ayano-bot-preview.png" alt="Ayano Discord Bot" class="project-image">
+                    <h3>Ayano Discord Bot <span class="status-inactive">(Inactive)</span></h3>
+                    <p>A multi-functional Discord bot. Features: Moderation, Games, Utility. Developed using C#.<br><em>Please note: This project is no longer actively maintained.</em></p>
+                    <div class="project-links"><a href="https://github.com/Ayano-Discord/Ayano" target="_blank" rel="noopener noreferrer">Source Code</a></div>
+                    <div class="project-tags"><span>C#</span><span>Discord</span><span>Bot</span><span>Archived</span></div>
                 </div>
-            </article>
-
-            <article class="project-item inactive-project">
-
-                <img src="images/ayano-bot-preview.png" alt="Ayano Discord Bot" class="project-image">
-
-                <h3>Ayano Discord Bot <span class="status-inactive">(Inactive)</span></h3>
-
-                <p>
-                    A multi-functional Discord bot named Ayano. Features include Moderation, Games, and Utility. Developed using C#.
-                    <br><em>Please note: This project is no longer actively maintained.</em>
-                </p>
-
-                <div class="project-links">
-                    <a href="https://github.com/Ayano-Discord/Ayano" target="_blank" rel="noopener noreferrer">Source Code</a>
+                <div class="project-item">
+                    <img src="/images/favicon-32x32.png" alt="This Portfolio Website" class="project-image">
+                    <h3>This Portfolio Website</h3>
+                    <p>The personal website you are currently viewing. Built with Eleventy, HTML, CSS, and JavaScript, showcasing various projects and resources.</p>
+                    <div class="project-links"><a href="https://github.com/Apoo711/apoo711.github.io" target="_blank" rel="noopener noreferrer">Source Code</a></div>
+                    <div class="project-tags"><span>Eleventy</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
                 </div>
-
-
-                <div class="project-tags">
-                    <span>C#</span>
-                    <span>Discord</span>
-                    <span>Bot</span>
+                <div class="project-item">
+                    <img src="/images/favicon-32x32.png" alt="Obsidian 3D Graph Plugin" class="project-image">
+                    <h3>Obsidian 3D Graph Plugin (Planned)</h3>
+                    <p>A planned plugin for Obsidian to visualize notes and their connections in an interactive 3D graph.</p>
+                    <div class="project-links"><a href="#" target="_blank" rel="noopener noreferrer">Source Code (Coming Soon)</a></div>
+                    <div class="project-tags"><span>Obsidian</span><span>Plugin</span><span>3D</span><span>Data Visualization</span></div>
                 </div>
-            </article>
-
-
+            </div>
         </div>
     </section>
 
@@ -193,7 +179,9 @@
     <p>&copy; 2025 Aryan Gupta. All rights reserved.</p>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 <script src="js/particles-config.js"></script>
 <script src="js/main.js"></script>
+<script src="js/slider.js"></script>
 </body>
 </html>
