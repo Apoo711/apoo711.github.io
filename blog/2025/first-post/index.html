@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My First Blog Post!</title>
+    <title>My Experience Building This Website</title>
     <link rel="stylesheet" href="/css/okaidia.css">
     <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/layout.css">
@@ -29,24 +29,124 @@
     <main>
         
 <article class="blog-post-full">
-  <h1>My First Blog Post!</h1> 
+  <h1>My Experience Building This Website</h1> 
    
   <p class="post-meta">
-    Published on <time datetime="2025-05-05">May 5, 2025</time>
+    Published on <time datetime="2025-05-16">May 16, 2025</time>
   </p>
   
   <hr style="border: none; border-top: 1px solid #444; margin: 30px auto; width: 70%;">
 
   
-  <h2>Welcome</h2>
-<p>This is content written in <strong>Markdown</strong>. Eleventy converts this to HTML.</p>
-<p>You can create lists:</p>
+  <h2>Introduction: Why Share This?</h2>
+<p>Welcome to the very first blog post on My Portfolio! While the primary mission here is to arm you with top-notch VCE resources, I thought pulling back the curtain on how this site was built might be an interesting read. For fellow aspiring developers, students curious about web development, or just anyone wondering what goes into creating an online resource, this one's for you.</p>
+<p>This isn't just about lines of code; it's about the problem-solving, the &quot;aha!&quot; moments, the inevitable frustrations, and the satisfaction of bringing an idea to life. So let's dive into the journey of building this platform.</p>
+<p><img src="/images/blog/2025/05-16/welcome.png" alt="A snapshot of the website's homepage"></p>
+<h2>The Spark: Where the Idea Came From</h2>
+<p>Every project, big or small, starts with a spark. For me, the idea for this website wasn't a sudden lightning bolt but more of a slow burn, fuelled by my own experiences and observations. As a current VCE student myself, I noticed how most resources available for students were often paywalled. The few free sources that were available were great, but were outdated in some cases.</p>
+<p>I envisioned a clean, accessible space where students could quickly find reliable resources without getting lost in a maze of forums or outdated links. The goal was to create something genuinely helpful.</p>
+<h2>Planning and Tech Choices: Laying the Foundation</h2>
+<p>Choosing the right technology stack is always a crucial decision. For this project, I opted for:</p>
 <ul>
-<li>Item 1</li>
-<li>Item 2</li>
+<li><strong>Hosting:</strong> <strong>GitHub Pages</strong>. It's free for public repositories, integrates beautifully with Git for version control (an absolute lifesaver!), and is fantastic for serving static sites like this one.</li>
+<li><strong>Core Technologies:</strong> I decided to build the site primarily with <strong>HTML, CSS, and vanilla JavaScript</strong>. While frameworks are powerful, I wanted to keep things lightweight, ensure fast load times, and have granular control over every aspect. It also felt like a good way to reinforce foundational skills.</li>
+<li><strong>Version Control:</strong> <strong>Git and GitHub</strong>. Non-negotiable for any development project, in my opinion. It allows for tracking changes, collaborating (even if it's just with your future self!), and rolling back if something goes spectacularly wrong.</li>
 </ul>
-<p>Add code blocks:</p>
-<pre class="language-js"><code class="language-js">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hello, Eleventy!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Here’s a very basic example of the HTML structure I used for a typical resource listing item. The actual implementation has a bit more to it for styling and functionality, but this gives you an idea:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span><span class="token punctuation">></span></span>General Notes &amp; Summaries<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>resource-list<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Link to file...<span class="token punctuation">"</span></span> <span class="token attr-name">download</span><span class="token punctuation">></span></span>Complex Numbers Summary (PDF)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        - Overview of complex number operations and De Moivre's theorem.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Link to file...<span class="token punctuation">"</span></span> <span class="token attr-name">download</span><span class="token punctuation">></span></span>Calculus Notes (PDF)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        - Covers differentiation and integration techniques relevant to Spec Maths.
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span></code></pre>
+<h2>The Building Process: Bringing it to Life</h2>
+<p>With a plan and tech stack decided, the real work began: translating ideas into a functional website. My process generally involved:</p>
+<ol>
+<li><strong>Structuring the Content (HTML):</strong> Building the semantic skeleton for each page type – homepage, subject pages, resource listings, blog posts.</li>
+<li><strong>Styling (CSS):</strong> Applying the visual design. This was an iterative process, starting with a basic layout and progressively refining the look and feel, focusing on readability and a clean user interface. I made heavy use of CSS Flexbox and Grid for layout.</li>
+<li><strong>Adding Interactivity (JavaScript):</strong> Implementing any dynamic features, like a mobile navigation menu, search/filter functionality (a future goal!), or smooth scrolling.</li>
+</ol>
+<p>One of the first major components I tackled was setting up the system for displaying the VCE resources. This involved thinking about how to categorise them and make them easily discoverable.</p>
+<p><img src="/images/blog/2025/05-16/wip-blog.png" alt="The first iteration of the test blog"></p>
+<p>Ensuring the website was fully responsive was a top priority. This meant a lot of testing across different screen sizes and tweaking CSS. Here’s a little CSS snippet that helps manage the layout of resource cards on different screen sizes using Flexbox:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">.resource-list</span> <span class="token punctuation">{</span>
+  <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">padding-left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.resource-list li</span> <span class="token punctuation">{</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 18px<span class="token punctuation">;</span>
+  <span class="token property">padding-left</span><span class="token punctuation">:</span> 30px<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 1.5<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #ccc<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.resource-list li::before</span> <span class="token punctuation">{</span>
+  <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">'\f019'</span><span class="token punctuation">;</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Font Awesome 6 Free'</span><span class="token punctuation">;</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> 900<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> 3px<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #a78bfa<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 1em<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h2>Challenges I Faced (And How I Tackled Them)</h2>
+<p>It wouldn't be a real development story without a few curveballs! Here are a couple of notable challenges:</p>
+<ul>
+<li><strong>Challenge 1: The Dreaded Bandwidth Question</strong><br>
+One of the biggest initial headaches was figuring out the best way to host and serve the PDF resources, especially considering potential bandwidth limits with free hosting. GitHub Pages has soft limits, and while GitHub Releases is excellent for larger files, I also explored external options.
+<ul>
+<li><strong>Solution:</strong> After much research and weighing pros and cons (including cost, ease of use, and reliability), I decided to initially leverage GitHub Releases within a separate repository. This involved creating a separate repository dedicated to releases and linking to those assets. It’s an area I’ll continue to monitor and adapt if the site grows.</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/blog/2025/05-16/releases.png" alt="First Release of the Physics Resources"></p>
+<h2>Challenge 2: Perfecting the &quot;User-Friendly&quot; Vibe</h2>
+<p>It's one thing to make a site functional; it's another to make it genuinely user-friendly and intuitive, especially for students who might be stressed and short on time. I spent a lot of time tweaking navigation, information architecture, and even font choices.</p>
+<ul>
+<li><strong>Solution:</strong> I focused on simplicity. I tried to put myself in a VCE student's shoes: What would I need to find quickly? How can I reduce clicks? I also asked a few friends to test early versions and provide honest feedback, which was incredibly valuable for identifying confusing elements or awkward workflows.</li>
+</ul>
+<h2>Key Learnings and Takeaways</h2>
+<p>This project has been a fantastic learning curve. Beyond the technical skills, here are some broader lessons:</p>
+<ul>
+<li>
+<p><strong>Start Simple, Iterate Often:</strong> It’s tempting to want to build everything at once, but starting with a core set of features and then building outwards is much more manageable.</p>
+</li>
+<li>
+<p><strong>The Value of Good Structure:</strong> Well-organized code and content make a world of difference, not just for me maintaining the site, but hopefully for users navigating it too.</p>
+</li>
+<li>
+<p><strong>Don't Underestimate Design:</strong> Even for a resource-focused site, thoughtful design significantly impacts usability and the overall user experience.</p>
+</li>
+<li>
+<p><strong>Community is Key:</strong> While I built this solo, the wealth of knowledge shared by the developer community online (blogs, forums, documentation) was indispensable. Never hesitate to search for solutions or learn from others.</p>
+</li>
+<li>
+<p><strong>Persistence Pays Off:</strong> There were definitely moments of staring blankly at a bug at 1 AM, but pushing through those challenges is incredibly rewarding.</p>
+</li>
+</ul>
+<h2>What's Next?</h2>
+<p>This is just version 1.0! I have a list of ideas and improvements I’d love to implement over time:</p>
+<ul>
+<li>
+<p>Expanding the range of subjects and resources available.</p>
+</li>
+<li>
+<p>Adding more interactive study tools or checklists.</p>
+</li>
+<li>
+<p>Perhaps a dedicated section for VCE news and exam tips.</p>
+</li>
+</ul>
 
 </article>
 
