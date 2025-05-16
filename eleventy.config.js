@@ -10,7 +10,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/css");
     eleventyConfig.addPassthroughCopy("src/js");
     eleventyConfig.addPassthroughCopy("src/images");
-    eleventyConfig.addPassthroughCopy("src/files");
     eleventyConfig.addPassthroughCopy("src/favicon-32x32.png"); // Adjust if needed
 
     // --- Filters ---
