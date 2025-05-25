@@ -1,7 +1,8 @@
 ---
 title: My Experience Building This Website
 date: 2025-05-16 # Use YYYY-MM-DD format, or use "Last Modified" for Eleventy to use file mod date
-tags: post
+tags:
+  - post
 layout: layouts/post.njk # Tell it to use the post layout
 excerpt: "Ever wondered what goes into building a website from scratch? In my first blog post, I share the journey behind creating this VCE resource hub – from the initial idea and tech choices to the challenges faced and lessons learned along the way. Take a peek behind the scenes!"
 permalink: "/blog/{{ page.date.getFullYear() }}/{{ page.fileSlug }}/"

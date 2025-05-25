@@ -1,16 +1,11 @@
 ---
 title: "Exploring Compact-GUI: A Tool for Reclaiming Disk Space"
-date: 2025-05-26 # Update with today's date or your preferred publish date
+date: 2025-05-25 # Update with today's date or your preferred publish date
 tags:
   - post
-  - software
-  - utility
-  - windows
 layout: layouts/post.njk
 excerpt: "A look into Compact-GUI, an open-source application that utilizes Windows' CompactOS feature to help reduce the disk space occupied by games and programs. This post covers its functionality, my experience, and how to use it."
 permalink: "/blog/{{ page.date.getFullYear() }}/{{ page.fileSlug }}/"
-# featureImage: "/images/blog/2025/05-26/compact-gui-banner.png" # Uncomment if you have one
-# featureImageAlt: "Compact-GUI interface showing compression results"
 ---
 
 ## Introduction: The Challenge of Disk Space Management

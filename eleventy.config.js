@@ -1,10 +1,41 @@
 // eleventy.config.js
 const { DateTime } = require("luxon"); // Import Luxon library for dates
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginTOC = require('eleventy-plugin-toc');
+const markdownIt = require('markdown-it');
+const markdownItAnchor = require('markdown-it-anchor');
 
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPlugin(syntaxHighlight);
+
+    // --- TOC & Anchor Plugin Configuration ---
+    eleventyConfig.setLibrary(
+        'md',
+        markdownIt({
+            html: true,
+            linkify: true,
+            typographer: true,
+        }).use(markdownItAnchor, {
+            slugify: s => s.trim().toLowerCase().replace(/[\s+,.']/g, '-').replace(/[()]/g, ''), // Ensure consistent slugification
+            permalink: markdownItAnchor.permalink.ariaHidden({
+                placement: 'before', // Or 'after'
+                class: 'heading-anchor-link', // Optional: A class for styling the anchor link
+                symbol: '#', // Optional: The symbol for the anchor link
+                level: [2,3,4] // Optional: Only add permalinks to h2, h3, h4
+            })
+        })
+    );
+
+    eleventyConfig.addPlugin(pluginTOC, {
+        tags: ['h2', 'h3'], // Which heading tags to include in the TOC, h4 can be added if needed
+        wrapper: 'nav',           // What element to wrap the TOC in, e.g., 'nav'
+        wrapperClass: 'toc',      // Class for the wrapper element
+        ul: true,                 // Whether to use an unordered list (ul) or ordered list (ol)
+        flat: false               // Whether to generate a flat list or nested list
+    });
+
+
     // --- Passthrough Copy ---
     // (Keep your existing passthrough copy lines)
     eleventyConfig.addPassthroughCopy("src/css");

@@ -11,6 +11,14 @@ layout: 'base.njk'
   {% endif %}
   <hr style="border: none; border-top: 1px solid #444; margin: 30px auto; width: 70%;">
 
+    {% set generated_toc = content | toc %}
+    {% if generated_toc and generated_toc | length > 0 %}
+      <aside class="toc-container" aria-labelledby="toc-heading">
+        <h2 id="toc-heading">Table of Contents</h2>
+        {{ generated_toc | safe }}
+      </aside>
+    {% endif %}
+
   {# Display the main post content (from Markdown) #}
   {{ content | safe }}
 </article>
