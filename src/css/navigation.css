@@ -1,10 +1,11 @@
 header nav {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 20px; /* Slightly reduce padding for more space on smaller desktops */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* For positioning mobile menu later if needed */
 }
 
 header .logo a {
@@ -12,6 +13,7 @@ header .logo a {
     text-decoration: none;
     font-size: 1.8em;
     font-weight: bold;
+    z-index: 10; /* Ensure logo is above mobile menu background */
 }
 
 header nav ul.nav-links {
@@ -20,7 +22,7 @@ header nav ul.nav-links {
     align-items: center;
     margin: 0;
     padding: 0;
-    gap: 25px;
+    gap: 20px; /* Slightly reduce gap */
 }
 
 header nav ul.nav-links li a {
@@ -30,57 +32,123 @@ header nav ul.nav-links li a {
     color: #f0f0f0;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.1em;
-    padding: 8px 12px;
+    font-size: 1em; /* Slightly reduce font size */
+    padding: 8px 10px; /* Adjust padding */
     border-radius: 4px;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-icon {
-    width: 1.35em;
-    height: 1.35em;
-    fill: none;             /* <<< Do NOT fill the shape */
-    stroke: currentColor;   /* <<< Apply color to the OUTLINE */
-    stroke-width: 1.5;      /* <<< Define outline thickness (adjust 1.5, 1, 2 etc.) */
-    stroke-linecap: round;  /* Optional: Makes line ends rounded */
-    stroke-linejoin: round; /* Optional: Makes line joins rounded */
+    width: 1.3em; /* Slightly smaller icons */
+    height: 1.3em;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
     vertical-align: middle;
 }
 
 .special-icon {
-    width: 1.35em;
-    height: 1.35em;
-    fill: currentColor;             /* <<< Do NOT fill the shape */
-    stroke: currentColor;   /* <<< Apply color to the OUTLINE */
-    stroke-width: 1.5;      /* <<< Define outline thickness (adjust 1.5, 1, 2 etc.) */
-    stroke-linecap: round;  /* Optional: Makes line ends rounded */
-    stroke-linejoin: round; /* Optional: Makes line joins rounded */
+    width: 1.3em; /* Slightly smaller icons */
+    height: 1.3em;
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
     vertical-align: middle;
-}
-
-header nav ul.nav-links li a i {
-    font-size: 0.9em;
 }
 
 header nav ul.nav-links li a:hover {
     color: #a78bfa;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+/* --- Mobile Navigation Styles --- */
+.mobile-nav-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    color: #f0f0f0; /* This will be the stroke color for the SVG if not overridden by SVG itself */
+    cursor: pointer;
+    padding: 8px; /* Adjust padding around SVG */
+    z-index: 1001; /* Ensure it's above other header content */
+    line-height: 0; /* Prevents extra space if SVG is inline-block */
 }
 
-header nav ul li a {
-    color: #f0f0f0;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
+.mobile-nav-toggle .hamburger-svg-icon {
+    width: 28px; /* Adjust size as needed */
+    height: 28px; /* Adjust size as needed */
+    /* stroke: #f0f0f0; /* Default stroke color for paths if not set on paths themselves. SVG uses currentColor by default. */
 }
 
-header nav ul li a:hover {
-    color: #a78bfa;
+/* Styling for the user's SVG animating to an X */
+.mobile-nav-toggle .hamburger-svg-icon path {
+    stroke: currentColor; /* Inherits color from .mobile-nav-toggle button */
+    stroke-width: 2; /* Matches SVG attribute */
+    stroke-linecap: round; /* Matches SVG attribute */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform-origin: center center; /* Crucial for correct rotation */
+}
+
+/* Active state for SVG animation to "X" */
+/* Adjusted translateY to correct perceived skew in the "X" */
+.mobile-nav-toggle.active .hamburger-svg-icon .line-top {
+    /* Original y=7. Target meeting point y=12.5 (slightly lower than SVG mid-point 12) */
+    transform: translateY(5.8px) rotate(45deg);
+}
+.mobile-nav-toggle.active .hamburger-svg-icon .line-middle {
+    opacity: 0;
+    transform: scaleX(0); /* Optional: makes the fade out look a bit better */
+}
+.mobile-nav-toggle.active .hamburger-svg-icon .line-bottom {
+    /* Original y=17. Target meeting point y=12.5 */
+    transform: translateY(-4.2px) rotate(-45deg);
+}
+
+
+@media (max-width: 768px) { /* Breakpoint: Adjust as needed */
+    header nav {
+        padding: 0 15px; /* Adjust padding for mobile view */
+    }
+
+    header nav ul.nav-links {
+        display: none; /* Hide the desktop nav links */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Position below the header */
+        left: 0;
+        width: 100%;
+        background-color: rgba(20, 20, 40, 0.98); /* Match scrolled header or a solid color */
+        backdrop-filter: blur(5px);
+        padding: 15px 0;
+        gap: 0; /* Reset gap for vertical layout */
+        border-top: 1px solid #333;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    header nav ul.nav-links.mobile-nav-active {
+        display: flex; /* Show when active */
+    }
+
+    header nav ul.nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul.nav-links li a {
+        font-size: 1.1em;
+        padding: 15px 20px;
+        width: 100%;
+        justify-content: center;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    header nav ul.nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .mobile-nav-toggle {
+        display: block; /* Show hamburger button */
+    }
 }

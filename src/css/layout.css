@@ -25,6 +25,45 @@ header.header-scrolled {
     border-bottom: 1px solid #333; /* Add border */
 }
 
+/* Responsiveness (Original Desktop Styles) */
+.container {
+    width: 960px;
+    margin: 0 auto;
+    padding-left: 15px; /* Add some default padding */
+    padding-right: 15px;/* Add some default padding */
+}
+
+.sidebar {
+    width: 30%;
+    float: left;
+    padding: 0 15px; /* Add padding to sidebar */
+}
+
+.main-content {
+    width: 70%;
+    float: left;
+    padding: 0 15px; /* Add padding to main content */
+}
+
+/* If you use .flex-container for the main two-column layout (content + sidebar) */
+.flex-page-layout { /* Assuming a class for the main layout flex container */
+    display: flex;
+    width: 960px; /* Or your preferred desktop width */
+    margin: 0 auto;
+}
+
+.flex-page-layout .main-content-flex { /* Assuming a class for the main content area */
+    flex: 3; /* Example ratio */
+    padding: 20px;
+}
+
+.flex-page-layout .sidebar-flex { /* Assuming a class for the sidebar */
+    flex: 1; /* Example ratio */
+    padding: 20px;
+    background-color: #2a2a3e; /* Example sidebar background */
+}
+
+
 /* --- Main Content Area --- */
 main {
     /* Remove or change background-color if you want body background to show through */
@@ -32,7 +71,7 @@ main {
     z-index: 1;
     width: 80%;
     max-width: 960px;
-    margin: 80px auto 20px auto; /* Increase top margin due to fixed header */
+    margin: 100px auto 20px auto; /* Adjusted top margin due to fixed header height */
     padding: 25px;
     border-radius: 8px;
     box-shadow: none; /* Remove shadow if background is transparent */
@@ -41,7 +80,7 @@ main {
 
 /* --- Section Styling --- */
 section {
-    padding: 40px 0;        /* Vertical padding within each section */
+    padding: 30px 0;        /* Vertical padding within each section */
     margin-bottom: 20px;    /* Space below each section */
     border-bottom: 1px solid #333; /* Light separator line */
 }
@@ -59,11 +98,11 @@ section:last-of-type {
 
 #hero h1 {
     margin-bottom: 10px;
-    font-size: 2.5em;       /* Make main heading larger */
+    font-size: 2.2em;       /* Make main heading larger, adjust for mobile later */
 }
 
 #hero p {
-    font-size: 1.1em;
+    font-size: 1.0em; /* Adjust for mobile later */
     color: #dcdcdc;
 }
 
@@ -72,10 +111,12 @@ h2 {
     margin-bottom: 20px;    /* Space below section headings */
     color: #a78bfa; /* << Purple accent for headings */
     text-align: center;
+    font-size: 1.8em; /* Adjust for mobile later */
 }
 
 h3 {
     margin-bottom: 10px;    /* Space below project titles */
+    font-size: 1.5em; /* Adjust for mobile later */
 }
 
 /* --- Footer --- */
@@ -89,138 +130,131 @@ footer {
 }
 
 /* --- VCE Subject Page Spacing & HR Styling --- */
-
-/* Target the main section on subject pages */
 #spec-maths-resources,
 #physics-resources,
 #chem-resources,
 #eng-resources {
-    /* Add bottom padding for space before footer */
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
-/* Adjust intro paragraph spacing */
 #spec-maths-resources > p:first-of-type,
 #physics-resources > p:first-of-type,
 #chem-resources > p:first-of-type,
 #eng-resources > p:first-of-type {
     text-align: center;
-    margin-bottom: 40px; /* Increased space below intro paragraph */
+    margin-bottom: 30px;
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.7; /* Slightly more line spacing for intro */
+    line-height: 1.6;
+    font-size: 0.95em; /* Adjust for mobile */
 }
 
-/* Style the hr element */
 #spec-maths-resources hr,
 #physics-resources hr,
 #chem-resources hr,
 #eng-resources hr {
-    border: none; /* Remove default border */
-    border-top: 1px solid #444; /* Subtle line for dark theme */
-    margin: 50px auto; /* Increased vertical margin, auto centers */
-    width: 70%;        /* Make it less than full width */
+    border: none;
+    border-top: 1px solid #444;
+    margin: 40px auto;
+    width: 70%;
 }
 
-/* Adjust h3 subheading spacing */
 #spec-maths-resources h3,
 #physics-resources h3,
 #chem-resources h3,
 #eng-resources h3 {
     color: #e0e0e0;
-    margin-top: 45px;     /* Increased space ABOVE subheading (except first) */
-    margin-bottom: 20px;  /* Increased space BELOW subheading */
+    margin-top: 35px;
+    margin-bottom: 15px;
     padding-bottom: 8px;
     border-bottom: 1px solid #555;
     text-align: left;
-    font-size: 1.4em; /* Slightly larger subheading */
+    font-size: 1.3em; /* Adjust for mobile */
 }
 
-/* Keep rule for first h3 */
 #spec-maths-resources h3:first-of-type,
 #physics-resources h3:first-of-type,
 #chem-resources h3:first-of-type,
 #eng-resources h3:first-of-type {
-    margin-top: 0; /* Ensure no top margin on the first subheading */
+    margin-top: 0;
 }
 
-/* Adjust resource list spacing */
 .resource-list {
     list-style: none;
-    padding-left: 0; /* Remove default padding if using ::before icon */
-    margin-top: 0; /* Remove any extra space above list */
-    margin-bottom: 15px; /* Space below the whole list */
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .resource-list li {
-    margin-bottom: 18px; /* Increased space BETWEEN list items */
+    margin-bottom: 15px;
     padding-left: 30px;
     position: relative;
     line-height: 1.5;
     color: #ccc;
+    font-size: 0.9em; /* Adjust for mobile */
 }
 
-/* Adjust icon positioning slightly if needed */
 .resource-list li::before {
-    content: '\f019'; /* Font Awesome download icon */
+    content: '\f019';
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     position: absolute;
     left: 0px;
-    top: 3px; /* Adjust vertical alignment */
+    top: 3px;
     color: #a78bfa;
     font-size: 1em;
 }
 /* --- End VCE Subject Page Styling --- */
 
 /* --- Custom 404 Page Styling (Updated for 2-column layout) --- */
+/* Your existing 404 styles are good, including the media query. No changes needed here for now. */
 #custom-404-page {
-    display: flex;              /* Enable Flexbox */
-    flex-wrap: wrap;            /* Allow items to wrap on smaller screens */
-    justify-content: space-around; /* Distribute space around items */
-    align-items: center;        /* Vertically center items */
-    min-height: 90vh; /* calc(80vh - 100px); !* Adjust min-height as needed *!*/
-    padding: 40px 5%;           /* Use percentage for side padding */
-    gap: 30px;                  /* Space between the text and image columns */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 90vh;
+    padding: 40px 5%;
+    gap: 30px;
     color: #dcdcdc;
 }
 
 .error-text-content {
-    flex: 1 1 45%; /* Flex properties: grow, shrink, basis (text takes up roughly half) */
-    min-width: 300px; /* Minimum width before wrapping */
-    text-align: left;  /* <<< Text aligned left for this column */
+    flex: 1 1 45%;
+    min-width: 300px;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items (like button) to the start (left) */
+    align-items: flex-start;
 }
 
 .error-image-container {
-    flex: 1 1 45%; /* Image container also takes up roughly half */
+    flex: 1 1 45%;
     min-width: 300px;
     display: flex;
-    justify-content: center; /* Center image within its container */
+    justify-content: center;
     align-items: center;
 }
 
 .error-page-image-new {
-    max-width: 650px;   /* << INCREASED IMAGE SIZE (adjust as needed) */
-    width: 100%;        /* Make it responsive within its container */
+    max-width: 650px;
+    width: 100%;
     height: auto;
     display: block;
 }
 
-/* Text element styling within the left column */
 #custom-404-page .error-code,
 #custom-404-page .error-tagline,
 #custom-404-page .error-description,
 #custom-404-page .redirect-message {
-    text-align: left;   /* Ensure these inherit left alignment */
-    width: 100%;        /* Make them take full width of .error-text-content */
+    text-align: left;
+    width: 100%;
 }
 
 #custom-404-page .error-code {
-    font-size: clamp(4.5em, 16vw, 9em); /* Responsive large "404" */
+    font-size: clamp(4.5em, 16vw, 9em);
     font-weight: bold;
     color: #e8e8e8;
     margin-bottom: 0px;
@@ -240,14 +274,14 @@ footer {
     font-size: 1.1em;
     color: #bbb;
     margin-bottom: 25px;
-    max-width: 100%; /* Full width of text container */
+    max-width: 100%;
     line-height: 1.7;
 }
 
 #custom-404-page .redirect-message {
     font-size: 1em;
     color: #aaa;
-    margin-bottom: 30px; /* Increased space before button */
+    margin-bottom: 30px;
 }
 
 #custom-404-page .redirect-message strong#countdown-timer {
@@ -268,8 +302,7 @@ footer {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    margin-top: 0; /* Removed top margin as parent flex handles spacing now */
-    /* align-self: flex-start; is handled by parent .error-text-content */
+    margin-top: 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
@@ -280,33 +313,183 @@ footer {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Media Query for smaller screens to stack them */
+/* --- MOBILE STYLES --- */
+
+/* Targeting screens up to 1024px (Tablets and potentially small desktops) */
+@media (max-width: 1024px) {
+    .container,
+    .flex-page-layout { /* If using flex for main layout */
+        width: 90%; /* Make container more fluid */
+    }
+
+    main {
+        width: 90%; /* Make main content area more fluid */
+        padding: 20px;
+        margin-top: 90px; /* Adjust if header height changes */
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+    #hero p {
+        font-size: 0.95em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    h3 {
+        font-size: 1.3em;
+    }
+    #spec-maths-resources h3,
+    #physics-resources h3,
+    #chem-resources h3,
+    #eng-resources h3 {
+        font-size: 1.2em; /* Slightly smaller for subject subheadings */
+    }
+}
+
+/* Targeting screens up to 768px (Typical mobile phones) */
 @media (max-width: 768px) {
+    header {
+        padding: 10px 0; /* Reduce header padding */
+    }
+
+    .container,
+    .flex-page-layout { /* If using flex for main layout */
+        width: 95%; /* Even more fluid, or use 100% and manage padding on children */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* If using the float-based .sidebar and .main-content */
+    .sidebar,
+    .main-content {
+        width: 100%;
+        float: none; /* Stack them */
+        padding-left: 0; /* Reset padding if container handles it */
+        padding-right: 0;
+    }
+    .sidebar {
+        margin-bottom: 20px; /* Add space when stacked */
+    }
+
+    /* If using .flex-page-layout for the main two-column layout */
+    .flex-page-layout {
+        flex-direction: column; /* Stack items vertically */
+    }
+    .flex-page-layout .sidebar-flex {
+        margin-bottom: 20px; /* Add space when stacked */
+    }
+
+
+    main {
+        width: 100%; /* Full width on mobile */
+        margin-top: 80px; /* Adjust if header height changes */
+        padding: 15px;
+        border-radius: 0; /* Optional: remove border-radius on mobile for edge-to-edge feel */
+    }
+
+    section {
+        padding: 20px 0;
+    }
+
+    #hero h1 {
+        font-size: 1.8em;
+    }
+    #hero p {
+        font-size: 0.9em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+
+    /* VCE Subject Page adjustments for mobile */
+    #spec-maths-resources > p:first-of-type,
+    #physics-resources > p:first-of-type,
+    #chem-resources > p:first-of-type,
+    #eng-resources > p:first-of-type {
+        margin-bottom: 20px;
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+
+    #spec-maths-resources hr,
+    #physics-resources hr,
+    #chem-resources hr,
+    #eng-resources hr {
+        margin: 30px auto;
+        width: 80%;
+    }
+
+    #spec-maths-resources h3,
+    #physics-resources h3,
+    #chem-resources h3,
+    #eng-resources h3 {
+        font-size: 1.1em;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    .resource-list li {
+        margin-bottom: 12px;
+        padding-left: 25px; /* Slightly reduce padding if icon feels too far */
+        font-size: 0.85em;
+    }
+    .resource-list li::before {
+        top: 2px; /* May need slight adjustment */
+        font-size: 0.9em; /* Slightly smaller icon */
+    }
+
+    /* 404 Page - already has its own good media query, but ensure consistency */
     #custom-404-page {
-        flex-direction: column; /* Stack text on top of image */
+        padding: 20px 5%; /* Adjust padding */
+        min-height: 80vh;
     }
-
     .error-text-content {
-        order: 2; /* Text appears below image */
-        align-items: center; /* Center items in the text block when stacked */
-        text-align: center; /* Center text content when stacked */
-        margin-top: 30px;
-    }
-    .error-image-container {
-        order: 1; /* Image appears on top */
-        width: 100%; /* Allow image container to be full width */
-    }
-
-    #custom-404-page .error-code,
-    #custom-404-page .error-tagline,
-    #custom-404-page .error-description,
-    #custom-404-page .redirect-message {
-        text-align: center; /* Re-center text when stacked */
-    }
-    .take-me-home {
-        align-self: center; /* Center button when stacked */
+        margin-top: 20px;
     }
     .error-page-image-new {
-        max-width: 220px; /* Maybe slightly smaller image on mobile */
+        max-width: 200px; /* Further reduce 404 image if needed */
+    }
+    .take-me-home {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+/* Targeting screens up to 480px (Smaller mobile phones) */
+@media (max-width: 480px) {
+    header {
+        padding: 8px 0;
+    }
+    main {
+        margin-top: 70px; /* Adjust if header height changes */
+        padding: 10px;
+    }
+    #hero h1 {
+        font-size: 1.6em;
+    }
+    #hero p {
+        font-size: 0.85em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    h3 {
+        font-size: 1.1em;
+    }
+
+    /* Further fine-tuning for VCE pages if needed */
+    #spec-maths-resources h3,
+    #physics-resources h3,
+    #chem-resources h3,
+    #eng-resources h3 {
+        font-size: 1.0em;
+    }
+    .resource-list li {
+        font-size: 0.8em;
     }
 }
