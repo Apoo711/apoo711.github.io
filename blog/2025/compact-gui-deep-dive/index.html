@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Compact-GUI: A Tool for Reclaiming Disk Space</title>
+    <link rel="stylesheet" href="/css/okaidia.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/navigation.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" ... />
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <header>
+        <nav>
+            <div class="logo"><a href="/">AG</a></div>
+            <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+                <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-svg-icon">
+                    <path class="line-top" d="M5 7H19" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                    <path class="line-middle" d="M5 12H19" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                    <path class="line-bottom" d="M5 17H19" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <ul class="nav-links">
+            <li>
+                <a href="/index.html#about">
+                    <svg viewBox="0 0 24 24" class="nav-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12,11A5,5,0,1,0,7,6,5.006,5.006,0,0,0,12,11Zm0-8A3,3,0,1,1,9,6,3,3,0,0,1,12,3ZM3,22a9,9,0,0,1,18,0,1,1,0,0,1-2,0A7,7,0,0,0,5,22a1,1,0,0,1-2,0Z"/>
+                    </svg>
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="/vce/">
+                    <svg viewBox="0 0 24 24" class="nav-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 10.4V20M12 10.4C12 8.15979 12 7.03969 11.564 6.18404C11.1805 5.43139 10.5686 4.81947 9.81596 4.43597C8.96031 4 7.84021 4 5.6 4H4.6C4.03995 4 3.75992 4 3.54601 4.10899C3.35785 4.20487 3.20487 4.35785 3.10899 4.54601C3 4.75992 3 5.03995 3 5.6V16.4C3 16.9601 3 17.2401 3.10899 17.454C3.20487 17.6422 3.35785 17.7951 3.54601 17.891C3.75992 18 4.03995 18 4.6 18H7.54668C8.08687 18 8.35696 18 8.61814 18.0466C8.84995 18.0879 9.0761 18.1563 9.29191 18.2506C9.53504 18.3567 9.75977 18.5065 10.2092 18.8062L12 20M12 10.4C12 8.15979 12 7.03969 12.436 6.18404C12.8195 5.43139 13.4314 4.81947 14.184 4.43597C15.0397 4 16.1598 4 18.4 4H19.4C19.9601 4 20.2401 4 20.454 4.10899C20.6422 4.20487 20.7951 4.35785 20.891 4.54601C21 4.75992 21 5.03995 21 5.6V16.4C21 16.9601 21 17.2401 20.891 17.454C20.7951 17.6422 20.6422 17.7951 20.454 17.891C20.2401 18 19.9601 18 19.4 18H16.4533C15.9131 18 15.643 18 15.3819 18.0466C15.15 18.0879 14.9239 18.1563 14.7081 18.2506C14.465 18.3567 14.2402 18.5065 13.7908 18.8062L12 20"/>
+                    </svg>
+                    VCE Resources
+                </a>
+            </li>
+            <li>
+                <a href="/blog/">
+                    <svg class="nav-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+
+                        <path d="M6 3v1.5c1.469 0 2.85 0.572 3.889 1.611s1.611 2.42 1.611 3.889h1.5c0-3.866-3.134-7-7-7z"></path>
+                        <path d="M7.5 6l-1 1-3.5 1-3 6.5 0.396 0.396 3.638-3.638c-0.022-0.083-0.034-0.169-0.034-0.259 0-0.552 0.448-1 1-1s1 0.448 1 1-0.448 1-1 1c-0.090 0-0.176-0.012-0.259-0.034l-3.638 3.638 0.396 0.396 6.5-3 1-3.5 1-1-2.5-2.5z"></path>
+                    </svg>
+                    Blogs
+                </a>
+            </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+<article class="blog-post-full">
+  <h1>Exploring Compact-GUI: A Tool for Reclaiming Disk Space</h1> 
+   
+  <p class="post-meta">
+    Published on <time datetime="2025-05-25">May 25, 2025</time>
+  </p>
+  
+  <hr style="border: none; border-top: 1px solid #444; margin: 30px auto; width: 70%;">
+
+    
+    
+      <aside class="toc-container" aria-labelledby="toc-heading">
+        <h2 id="toc-heading">Table of Contents</h2>
+        <nav class="toc" >
+        <ul><li><a href="#introduction:-the-challenge-of-disk-space-management"># Introduction: The Challenge of Disk Space Management</a></li><li><a href="#what-is-compact-gui?"># What is Compact-GUI?</a></li><li><a href="#how-does-it-work?"># How Does It Work?</a></li><li><a href="#my-experience-with-compact-gui"># My Experience with Compact-GUI</a></li><li><a href="#pros-and-cons"># Pros and Cons</a></li><li><a href="#how-to-get-started"># How to Get Started</a></li><li><a href="#conclusion"># Conclusion</a></li></ul>
+      </nav>
+      </aside>
+    
+
+  
+  <h2 id="introduction:-the-challenge-of-disk-space-management" tabindex="-1"><a class="heading-anchor-link" href="#introduction:-the-challenge-of-disk-space-management" aria-hidden="true">#</a> Introduction: The Challenge of Disk Space Management</h2>
+<p>As software and game installations continue to grow in size, managing available disk space has become an increasingly important consideration for many users. Finding effective ways to reduce the storage footprint of these programs without significantly impacting performance can be highly beneficial. This post explores an open-source tool called Compact-GUI, which aims to address this challenge.</p>
+<p>We will look at what Compact-GUI is, the underlying technology it uses, my personal experience with the tool, and a brief guide on how to use it.</p>
+<h2 id="what-is-compact-gui?" tabindex="-1"><a class="heading-anchor-link" href="#what-is-compact-gui?" aria-hidden="true">#</a> What is Compact-GUI?</h2>
+<p>Compact-GUI is a graphical user interface for a built-in Windows feature known as CompactOS. The CompactOS functionality allows the operating system to compress files and folders, including those belonging to installed applications and games. This compression is transparent to the user, meaning that the files remain directly accessible and executable without a manual decompression step, while occupying less physical disk space.</p>
+<p>Compact-GUI simplifies the process of applying and managing this compression, making it more accessible than using the command-line <code>compact.exe</code> tool directly. You can find the project and download it from its <strong><a href="https://github.com/IridiumIO/CompactGUI">official GitHub repository</a></strong>.</p>
+<p><img src="/images/blog/2025/05-25/compact-gui-main.png" alt="Compact-GUI Main Interface"></p>
+<h2 id="how-does-it-work?" tabindex="-1"><a class="heading-anchor-link" href="#how-does-it-work?" aria-hidden="true">#</a> How Does It Work?</h2>
+<p>Compact-GUI leverages various compression algorithms provided by the Windows CompactOS functionality, such as XPRESS4K, XPRESS8K, XPRESS16K, and LZX. These algorithms are designed to balance compression ratios with the potential performance overhead.</p>
+<ul>
+<li><strong>Lossless Compression:</strong> The compression applied is lossless, ensuring that no data is discarded or altered. Files are merely stored in a more space-efficient manner.</li>
+<li><strong>CPU Overhead:</strong> Accessing compressed files incurs a minor CPU overhead as they are decompressed into memory in real-time. On modern systems, this impact is often negligible for many applications. Once data is accessed and cached, subsequent reads are typically unaffected.</li>
+</ul>
+<p>The tool allows users to:</p>
+<ol>
+<li>Select specific folders for compression.</li>
+<li>Choose from the available compression algorithms.</li>
+<li>Analyze folders to estimate potential space savings.</li>
+<li>Apply or remove compression as needed.</li>
+</ol>
+<h2 id="my-experience-with-compact-gui" tabindex="-1"><a class="heading-anchor-link" href="#my-experience-with-compact-gui" aria-hidden="true">#</a> My Experience with Compact-GUI</h2>
+<p>I decided to test Compact-GUI on several large game installations and software applications to assess its effectiveness.</p>
+<p><strong>Test Case 1: Valorant</strong></p>
+<ul>
+<li><strong>Original Size:</strong> 57.4 GB</li>
+<li><strong>Size after Compact-GUI (Algorithm: X16):</strong> 31 GB</li>
+<li><strong>Space Saved:</strong> 26.4 GB (46%)</li>
+<li><strong>Performance Impact Noted:</strong> A marginal increase in initial load time was observed, but general usability remained unaffected.</li>
+</ul>
+<p><img src="/images/blog/2025/05-25/val-results.png" alt="Valorant Compression Results"></p>
+<p><strong>Test Case 2: Aimlabs</strong></p>
+<ul>
+<li><strong>Original Size:</strong> 16.2 GB</li>
+<li><strong>Size after Compact-GUI (Algorithm: X16):</strong> 9.4 GB</li>
+<li><strong>Space Saved:</strong> 6.8 GB (42%)</li>
+<li><strong>Performance Impact Noted:</strong> No noticeable difference in loading times or in-application performance.</li>
+</ul>
+<p><img src="/images/blog/2025/05-25/aimlabs-results.png" alt="Aimlabs Compression Results"></p>
+<p><strong>Test Case 3: Adobe Lightroom CC</strong></p>
+<ul>
+<li><strong>Original Size:</strong> 2.3 GB</li>
+<li><strong>Size after Compact-GUI (Algorithm: LZX):</strong> 1.5 GB</li>
+<li><strong>Space Saved:</strong> 0.8 GB (35%)</li>
+<li><strong>Performance Impact Noted:</strong> No noticeable difference in loading times or in-application performance.</li>
+</ul>
+<p><img src="/images/blog/2025/05-25/lightroomcc-results.png" alt="Aimlabs Compression Results"></p>
+<p>My overall experience was positive. Significant disk space was reclaimed, particularly with applications containing a large number of uncompressed assets. The performance impact was generally minimal in most of my test cases.</p>
+<h2 id="pros-and-cons" tabindex="-1"><a class="heading-anchor-link" href="#pros-and-cons" aria-hidden="true">#</a> Pros and Cons</h2>
+<p>Here is a summary of the advantages and potential drawbacks observed:</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li><strong>Significant Disk Space Reduction:</strong> Capable of freeing up substantial amounts of storage.</li>
+<li><strong>User-Friendly Interface:</strong> Simplifies the use of the underlying CompactOS feature.</li>
+<li><strong>Transparent File Access:</strong> Compressed files and applications function normally.</li>
+<li><strong>Choice of Compression Algorithms:</strong> Allows users to select an algorithm based on their needs.</li>
+<li><strong>Open Source:</strong> Available for free, with its source code accessible for review. The project can be found on <strong><a href="https://github.com/IridiumIO/CompactGUI">GitHub</a></strong>.</li>
+<li><strong>Generally Low Performance Overhead:</strong> Minimal impact on modern hardware for many use cases.</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li><strong>CPU Usage for Decompression:</strong> Some CPU resources are used during on-the-fly decompression, which could be a factor on older or less powerful systems, or with highly I/O-bound applications.</li>
+<li><strong>Limited Effectiveness on Already Compressed Files:</strong> Files that are already efficiently compressed (e.g., JPG images, MP3 audio, most video formats) will yield little to no additional space savings. It is generally not recommended for system files or folders with very frequent write activity.</li>
+<li><strong>Processing Time:</strong> Initial compression or decompression of very large folders can take a considerable amount of time.</li>
+</ul>
+<h2 id="how-to-get-started" tabindex="-1"><a class="heading-anchor-link" href="#how-to-get-started" aria-hidden="true">#</a> How to Get Started</h2>
+<ol>
+<li><strong>Download:</strong> Obtain the latest version from the official Compact-GUI GitHub repository.</li>
+<li><strong>Select Folder:</strong> Launch Compact-GUI and choose the directory you wish to compress.</li>
+<li><strong>Analyze:</strong> Use the analysis feature to estimate the potential disk space savings.</li>
+<li><strong>Compress:</strong> Select your preferred compression algorithm (I find XPRESS16K offers a good balance, but you can experiment) and initiate the process.</li>
+</ol>
+<h2 id="conclusion" tabindex="-1"><a class="heading-anchor-link" href="#conclusion" aria-hidden="true">#</a> Conclusion</h2>
+<p>Compact-GUI is a valuable utility for users looking to optimize disk space usage, particularly for large games or applications with many compressible assets. By providing an accessible interface to a native Windows feature, it allows for notable storage gains with generally acceptable performance trade-offs.</p>
+<p>As with any tool that modifies file storage, it’s advisable to understand its operation and use it judiciously, avoiding critical system directories or data that is subject to constant modification. However, for its intended purpose, Compact-GUI proves to be a very effective solution.</p>
+<hr>
+
+</article>
+
+<p style="margin-top: 40px; text-align: center;">
+  <a href="/blog/">&larr; Back to Blog List</a> 
+</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aryan Gupta. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="/js/particles-config.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
