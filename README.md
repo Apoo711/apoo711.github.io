@@ -1,8 +1,7 @@
 # Aryan Gupta - Personal Portfolio & Resource Hub
 
 This repository contains the source code for my personal portfolio website, VCE resource hub, and blog.
-The live site is hosted on GitHub Pages at: **[https://apoo711.github.io/](https://apoo711.github.io/)**
-*(Custom domain `aryan-gupta.is-a.dev` pending setup).*
+The live site is hosted on GitHub Pages at: **[https://aryan-gupta.is-a.dev/](http://aryan-gupta.is-a.dev/)**
 
 ## 🌟 About This Site
 
