@@ -42,6 +42,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/js");
     eleventyConfig.addPassthroughCopy("src/images");
     eleventyConfig.addPassthroughCopy("src/favicon-32x32.png"); // Adjust if needed
+    eleventyConfig.addPassthroughCopy("robots.txt");
+    eleventyConfig.addPassthroughCopy("sitemap.xml");
 
     // --- Filters ---
     // Readable Date Filter (e.g., May 5, 2025)
