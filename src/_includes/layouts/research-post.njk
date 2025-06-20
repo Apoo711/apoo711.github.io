@@ -1,0 +1,13 @@
+<main class="research-article-container">
+    <article>
+        <header class="research-header">
+            <h1>{{ title }}</h1>
+            <p class="meta">
+                Published on <time datetime="{{ date | htmlDateString }}">{{ date | readableDate("DDD") }}</time>
+            </p>
+        </header>
+        <div class="research-content">
+            {{ content | safe }}
+        </div>
+    </article>
+</main>

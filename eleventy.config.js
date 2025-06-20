@@ -35,6 +35,12 @@ module.exports = function(eleventyConfig) {
         flat: false               // Whether to generate a flat list or nested list
     });
 
+    // --- Collections ---
+    // This new collection will group all posts with the 'research' tag.
+    eleventyConfig.addCollection("research", function(collectionApi) {
+        return collectionApi.getFilteredByTag("research");
+    });
+
 
     // --- Passthrough Copy ---
     // (Keep your existing passthrough copy lines)
