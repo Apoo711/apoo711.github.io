@@ -6,7 +6,8 @@ layout: layouts/research-post.njk
 permalink: "/research/{{ page.date.getFullYear() }}/{{ page.fileSlug }}/"
 tags:
   - research
-status: "Completed"
+status: "In Progress"
+lastUpdated: 2025-06-21 # The new field
 ---
 
 ## Abstract
