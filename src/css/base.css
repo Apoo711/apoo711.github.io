@@ -1,14 +1,13 @@
-/* --- Basic Reset & Defaults --- */
 * {
-    box-sizing: border-box; /* Makes padding/border calculation more intuitive */
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Assuming you added Poppins font */
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: #0f0f24; /* << Dark blue/purple background */
-    color: #dcdcdc;            /* << Light grey default text */
+    background-color: #0f0f24;
+    color: #dcdcdc;
     padding-top: 60px;
 }

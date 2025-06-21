@@ -3,4 +3,4 @@ layout: layouts/research-list.njk
 title: Research & Explorations
 ---
 
-Welcome to my research hub. Here you'll find explorations into various topics, from reviving abandoned open-source projects to technical deep-dives and analyses.
+Welcome to my research archive. Here I present original articles and papers stemming from my investigations into a range of complex historical and academic topics. Please browse the collection below.

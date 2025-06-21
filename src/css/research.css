@@ -140,10 +140,10 @@
 }
 
 .research-header {
-    margin-top: -150px;
     position: static !important;
+    margin-top: -110px;
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     margin-bottom: 30px;
     border-bottom: 1px solid var(--research-border-color);
 }
@@ -284,6 +284,10 @@
 .page-content-main {
     grid-column: 4;
     max-width: none; /* We control width with the grid now */
+}
+
+.sticky-toc .heading-anchor-link {
+    display: none;
 }
 
 /* --- Responsive styles for smaller screens --- */

@@ -1,7 +1,7 @@
 ---
-title: "Sample Research Article"
-description: "A brief look into a sample topic for demonstration purposes."
-date: 2025-06-20
+title: "Spanish Inquisition (Placeholder)"
+description: "A brief look into the Spanish Inquisition"
+date: 2025-06-19
 layout: layouts/research-post.njk
 permalink: "/research/{{ page.date.getFullYear() }}/{{ page.fileSlug }}/"
 tags:
