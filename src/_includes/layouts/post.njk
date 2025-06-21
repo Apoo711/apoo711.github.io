@@ -1,10 +1,10 @@
 ---
-layout: 'base.njk'
+layout: 'layouts/base.njk'
 ---
 
 <article class="blog-post-full">
-  <h1>{{ title }}</h1> {# Display title from front matter #}
-  {% if date %} {# Display date if available #}
+  <h1>{{ title }}</h1>
+  {% if date %}
   <p class="post-meta">
     Published on <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
   </p>
@@ -19,7 +19,6 @@ layout: 'base.njk'
       </aside>
     {% endif %}
 
-  {# Display the main post content (from Markdown) #}
   {{ content | safe }}
 </article>
 

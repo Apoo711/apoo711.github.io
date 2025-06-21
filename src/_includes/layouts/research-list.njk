@@ -1,0 +1,30 @@
+---
+layout: 'layouts/base.njk'
+---
+
+<main>
+    <section id="research-list">
+        <h1>{{ title }}</h1>
+        <p class="intro">{{ content | safe }}</p>
+
+        <div class="article-list">
+            {% for post in collections.research | reverse %}
+                <article class="article-item">
+                    <div class="article-title-line">
+                        <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+                        {% if post.data.status %}
+                            <span class="status-badge status-{{ post.data.status | slug }}">{{ post.data.status }}</span>
+                        {% endif %}
+                    </div>
+                    <p class="meta">
+                        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("DDD") }}</time>
+                    </p>
+                    {% if post.data.description %}
+                        <p class="excerpt">{{ post.data.description }}</p>
+                    {% endif %}
+                    <a href="{{ post.url | url }}" class="read-more">Read More &rarr;</a>
+                </article>
+            {% endfor %}
+        </div>
+    </section>
+</main>
