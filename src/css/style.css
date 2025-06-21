@@ -1,29 +1,27 @@
-/* --- Background Shapes --- */
 .background-shape {
-    position: fixed; /* Stick to viewport */
+    position: fixed;
     border-radius: 50%;
-    opacity: 0.1;    /* Make them subtle */
-    z-index: -2;     /* Position behind everything */
-    filter: blur(60px); /* Heavy blur */
-    pointer-events: none; /* Prevent interaction */
+    opacity: 0.1;
+    z-index: -2;
+    filter: blur(60px);
+    pointer-events: none;
 }
 
 .shape1 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(138, 43, 226, 0.6) 0%, rgba(138, 43, 226, 0) 70%); /* Purple */
-    top: -100px; /* Position off-screen */
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.6) 0%, rgba(138, 43, 226, 0) 70%);
+    top: -100px;
     left: -150px;
 }
 
 .shape2 {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(70, 0, 150, 0.5) 0%, rgba(70, 0, 150, 0) 70%); /* Darker Purple/Blue */
+    background: radial-gradient(circle, rgba(70, 0, 150, 0.5) 0%, rgba(70, 0, 150, 0) 70%);
     bottom: -80px;
     right: -100px;
 }
-/* --- End Background Shapes --- */
 
 #tsparticles {
     position: fixed;
@@ -34,46 +32,37 @@
     z-index: -1;
 }
 
-/* --- Single Blog Post Page Styling --- */
-
-/* Container for the full blog post content */
 .blog-post-full {
-    max-width: 750px; /* Constrain width for better readability */
-    margin: 0 auto 40px auto; /* Center the content block, add bottom margin */
-    /* background-color: rgba(20, 20, 40, 0.5); /* Optional subtle background */
-    /* padding: 20px; */ /* Optional padding for the block itself */
-    /* border-radius: 6px; */
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+
 }
 
-/* Main Post Title (H1 from post.njk layout) */
 .blog-post-full h1 {
-    font-size: 2.4em; /* Adjust as needed */
+    font-size: 2.4em;
     color: #e8e8e8;
     margin-bottom: 10px;
     line-height: 1.3;
-    text-align: left; /* Assuming you want post titles left-aligned */
+    text-align: left;
 }
 
-/* Post Meta Data (Date) */
 .blog-post-full .post-meta {
     font-size: 0.9em;
     color: #aaa;
-    margin-bottom: 25px; /* Space before the HR */
+    margin-bottom: 25px;
     font-style: italic;
 }
 
-/* HR Separator (from post.njk layout) */
-.blog-post-full hr { /* If you kept the HR in post.njk */
+.blog-post-full hr {
     border: none;
     border-top: 1px solid #444;
-    margin: 40px auto; /* Increased vertical margin */
+    margin: 40px auto;
     width: 70%;
 }
 
-/* Styling for content generated from Markdown (inside {{ content | safe }}) */
 .blog-post-full p {
     margin-bottom: 1.6em;
-    line-height: 1.75; /* Generous line height for readability */
+    line-height: 1.75;
     color: #dcdcdc;
 }
 
@@ -81,7 +70,7 @@
 .blog-post-full h3,
 .blog-post-full h4 {
     color: #e0e0e0;
-    margin-top: 2.2em;  /* More space above subheadings in content */
+    margin-top: 2.2em;
     margin-bottom: 0.8em;
     line-height: 1.4;
 }
@@ -100,7 +89,7 @@
     margin-bottom: 0.6em;
     line-height: 1.7;
 }
-.blog-post-full ul li::marker { color: #a78bfa; } /* Style bullets */
+.blog-post-full ul li::marker { color: #a78bfa; }
 .blog-post-full ol { list-style-type: decimal; }
 
 .blog-post-full blockquote {
@@ -113,10 +102,10 @@
 }
 
 .blog-post-full pre {
-    background-color: #1e1e30; /* Darker background for code blocks */
+    background-color: #1e1e30;
     padding: 1em;
     border-radius: 5px;
-    overflow-x: auto; /* Allow horizontal scroll */
+    overflow-x: auto;
     margin-bottom: 1.6em;
     border: 1px solid #444;
     font-size: 0.9em;
@@ -132,15 +121,13 @@
     color: #f0f0f0;
 }
 
-.blog-post-full pre code { /* Reset for code inside <pre> (syntax highlighting will style this) */
+.blog-post-full pre code {
     background-color: transparent;
     padding: 0;
-    color: inherit; /* Will be styled by syntax highlighter's theme */
+    color: inherit;
     font-size: inherit;
 }
 
-/* "Back to Blog List" link styling */
-/* Targets the <p> tag specifically, assuming it's the direct sibling after article.blog-post-full */
 article.blog-post-full + p[style*="text-align: center"] a {
     display: inline-block;
     color: #a78bfa;
@@ -156,28 +143,25 @@ article.blog-post-full + p[style*="text-align: center"] a:hover {
     color: #0f0f24;
 }
 
-/* Add to your blog.css or components.css */
 .blog-post-full img {
-    max-width: 100%; /* Make images responsive */
+    max-width: 100%;
     height: auto;
-    display: block; /* Allows margin auto to work for centering */
-    margin: 25px auto; /* Add space around images and center them */
-    border-radius: 4px; /* Optional: rounded corners */
-    /* box-shadow: 0 4px 8px rgba(0,0,0,0.15); */ /* Optional: subtle shadow */
+    display: block;
+    margin: 25px auto;
+    border-radius: 4px;
+
 }
 
-/* Add to your blog.css or components.css */
 .blog-post-full p a,
-.blog-post-full li a { /* For links within paragraphs or list items */
-    color: #a78bfa; /* Your accent color */
+.blog-post-full li a {
+    color: #a78bfa;
     text-decoration: underline;
-    text-decoration-thickness: 1px; /* Thinner underline */
-    text-underline-offset: 3px; /* Space between text and underline */
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
     transition: color 0.2s ease;
 }
 .blog-post-full p a:hover,
 .blog-post-full li a:hover {
-    color: #c4b0ff; /* Lighter purple on hover */
+    color: #c4b0ff;
     text-decoration-thickness: 2px;
 }
-

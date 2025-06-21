@@ -1,125 +1,117 @@
-/* --- Header & Navigation --- */
 header {
-    /* Default state (at top) */
-    background-color: transparent; /* <<< Make background clear initially */
-    backdrop-filter: none;         /* <<< No blur initially */
-    color: #f0f0f0;                /* Keep text light */
+
+    background-color: transparent;
+    backdrop-filter: none;
+    color: #f0f0f0;
     padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 100;
-    box-shadow: none;             /* <<< No shadow initially */
-    border-bottom: 1px solid transparent; /* <<< Transparent border initially */
-    /* Add transitions for a smooth change */
+    box-shadow: none;
+    border-bottom: 1px solid transparent;
+
     transition: background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 header.header-scrolled {
-    background-color: rgba(20, 20, 40, 0.85); /* Darker semi-transparent background */
-    /* Apply blur - add prefix for Safari */
+    background-color: rgba(20, 20, 40, 0.85);
+
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Add shadow */
-    border-bottom: 1px solid #333; /* Add border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid #333;
 }
 
-/* Responsiveness (Original Desktop Styles) */
 .container {
     width: 960px;
     margin: 0 auto;
-    padding-left: 15px; /* Add some default padding */
-    padding-right: 15px;/* Add some default padding */
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .sidebar {
     width: 30%;
     float: left;
-    padding: 0 15px; /* Add padding to sidebar */
+    padding: 0 15px;
 }
 
 .main-content {
     width: 70%;
     float: left;
-    padding: 0 15px; /* Add padding to main content */
+    padding: 0 15px;
 }
 
-/* If you use .flex-container for the main two-column layout (content + sidebar) */
-.flex-page-layout { /* Assuming a class for the main layout flex container */
+.flex-page-layout {
     display: flex;
-    width: 960px; /* Or your preferred desktop width */
+    width: 960px;
     margin: 0 auto;
 }
 
-.flex-page-layout .main-content-flex { /* Assuming a class for the main content area */
-    flex: 3; /* Example ratio */
+.flex-page-layout .main-content-flex {
+    flex: 3;
     padding: 20px;
 }
 
-.flex-page-layout .sidebar-flex { /* Assuming a class for the sidebar */
-    flex: 1; /* Example ratio */
+.flex-page-layout .sidebar-flex {
+    flex: 1;
     padding: 20px;
-    background-color: #2a2a3e; /* Example sidebar background */
+    background-color: #2a2a3e;
 }
 
-
-/* --- Main Content Area --- */
 main {
-    /* Remove or change background-color if you want body background to show through */
-    background-color: transparent; /* Or a very dark color like #1a1a2e */
+
+    background-color: transparent;
     z-index: 1;
     width: 80%;
     max-width: 960px;
-    margin: 100px auto 20px auto; /* Adjusted top margin due to fixed header height */
+    margin: 100px auto 20px auto;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: none; /* Remove shadow if background is transparent */
-    /* border: 1px solid #444; */ /* Optional: subtle border instead */
+    box-shadow: none;
+
 }
 
-/* --- Section Styling --- */
 section {
-    padding: 30px 0;        /* Vertical padding within each section */
-    margin-bottom: 20px;    /* Space below each section */
-    border-bottom: 1px solid #333; /* Light separator line */
+    padding: 30px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
 }
 
 section:last-of-type {
-    border-bottom: none;    /* Remove border from the last section */
+    border-bottom: none;
     margin-bottom: 0;
 }
 
 #hero {
-    text-align: center;     /* Center text in the hero section */
-    border-bottom: none;    /* No line needed after hero usually */
-    padding-top: 20px;      /* Less padding at the very top inside main */
+    text-align: center;
+    border-bottom: none;
+    padding-top: 20px;
 }
 
 #hero h1 {
     margin-bottom: 10px;
-    font-size: 2.2em;       /* Make main heading larger, adjust for mobile later */
+    font-size: 2.2em;
 }
 
 #hero p {
-    font-size: 1.0em; /* Adjust for mobile later */
+    font-size: 1.0em;
     color: #dcdcdc;
 }
 
-/* --- Headings --- */
 h2 {
-    margin-bottom: 20px;    /* Space below section headings */
-    color: #a78bfa; /* << Purple accent for headings */
+    margin-bottom: 20px;
+    color: #a78bfa;
     text-align: center;
-    font-size: 1.8em; /* Adjust for mobile later */
+    font-size: 1.8em;
 }
 
 h3 {
-    margin-bottom: 10px;    /* Space below project titles */
-    font-size: 1.5em; /* Adjust for mobile later */
+    margin-bottom: 10px;
+    font-size: 1.5em;
 }
 
-/* --- Footer --- */
 footer {
     text-align: center;
     margin-top: 40px;
@@ -129,7 +121,6 @@ footer {
     z-index: 1;
 }
 
-/* --- VCE Subject Page Spacing & HR Styling --- */
 #spec-maths-resources,
 #physics-resources,
 #chem-resources,
@@ -147,7 +138,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
-    font-size: 0.95em; /* Adjust for mobile */
+    font-size: 0.95em;
 }
 
 #spec-maths-resources hr,
@@ -170,7 +161,7 @@ footer {
     padding-bottom: 8px;
     border-bottom: 1px solid #555;
     text-align: left;
-    font-size: 1.3em; /* Adjust for mobile */
+    font-size: 1.3em;
 }
 
 #spec-maths-resources h3:first-of-type,
@@ -193,7 +184,7 @@ footer {
     position: relative;
     line-height: 1.5;
     color: #ccc;
-    font-size: 0.9em; /* Adjust for mobile */
+    font-size: 0.9em;
 }
 
 .resource-list li::before {
@@ -206,10 +197,7 @@ footer {
     color: #a78bfa;
     font-size: 1em;
 }
-/* --- End VCE Subject Page Styling --- */
 
-/* --- Custom 404 Page Styling (Updated for 2-column layout) --- */
-/* Your existing 404 styles are good, including the media query. No changes needed here for now. */
 #custom-404-page {
     display: flex;
     flex-wrap: wrap;
@@ -313,19 +301,16 @@ footer {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* --- MOBILE STYLES --- */
-
-/* Targeting screens up to 1024px (Tablets and potentially small desktops) */
 @media (max-width: 1024px) {
     .container,
-    .flex-page-layout { /* If using flex for main layout */
-        width: 90%; /* Make container more fluid */
+    .flex-page-layout {
+        width: 90%;
     }
 
     main {
-        width: 90%; /* Make main content area more fluid */
+        width: 90%;
         padding: 20px;
-        margin-top: 90px; /* Adjust if header height changes */
+        margin-top: 90px;
     }
 
     #hero h1 {
@@ -344,49 +329,45 @@ footer {
     #physics-resources h3,
     #chem-resources h3,
     #eng-resources h3 {
-        font-size: 1.2em; /* Slightly smaller for subject subheadings */
+        font-size: 1.2em;
     }
 }
 
-/* Targeting screens up to 768px (Typical mobile phones) */
 @media (max-width: 768px) {
     header {
-        padding: 10px 0; /* Reduce header padding */
+        padding: 10px 0;
     }
 
     .container,
-    .flex-page-layout { /* If using flex for main layout */
-        width: 95%; /* Even more fluid, or use 100% and manage padding on children */
+    .flex-page-layout {
+        width: 95%;
         padding-left: 10px;
         padding-right: 10px;
     }
 
-    /* If using the float-based .sidebar and .main-content */
     .sidebar,
     .main-content {
         width: 100%;
-        float: none; /* Stack them */
-        padding-left: 0; /* Reset padding if container handles it */
+        float: none;
+        padding-left: 0;
         padding-right: 0;
     }
     .sidebar {
-        margin-bottom: 20px; /* Add space when stacked */
+        margin-bottom: 20px;
     }
 
-    /* If using .flex-page-layout for the main two-column layout */
     .flex-page-layout {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column;
     }
     .flex-page-layout .sidebar-flex {
-        margin-bottom: 20px; /* Add space when stacked */
+        margin-bottom: 20px;
     }
 
-
     main {
-        width: 100%; /* Full width on mobile */
-        margin-top: 80px; /* Adjust if header height changes */
+        width: 100%;
+        margin-top: 80px;
         padding: 15px;
-        border-radius: 0; /* Optional: remove border-radius on mobile for edge-to-edge feel */
+        border-radius: 0;
     }
 
     section {
@@ -406,7 +387,6 @@ footer {
         font-size: 1.2em;
     }
 
-    /* VCE Subject Page adjustments for mobile */
     #spec-maths-resources > p:first-of-type,
     #physics-resources > p:first-of-type,
     #chem-resources > p:first-of-type,
@@ -435,24 +415,23 @@ footer {
 
     .resource-list li {
         margin-bottom: 12px;
-        padding-left: 25px; /* Slightly reduce padding if icon feels too far */
+        padding-left: 25px;
         font-size: 0.85em;
     }
     .resource-list li::before {
-        top: 2px; /* May need slight adjustment */
-        font-size: 0.9em; /* Slightly smaller icon */
+        top: 2px;
+        font-size: 0.9em;
     }
 
-    /* 404 Page - already has its own good media query, but ensure consistency */
     #custom-404-page {
-        padding: 20px 5%; /* Adjust padding */
+        padding: 20px 5%;
         min-height: 80vh;
     }
     .error-text-content {
         margin-top: 20px;
     }
     .error-page-image-new {
-        max-width: 200px; /* Further reduce 404 image if needed */
+        max-width: 200px;
     }
     .take-me-home {
         padding: 12px 25px;
@@ -460,13 +439,12 @@ footer {
     }
 }
 
-/* Targeting screens up to 480px (Smaller mobile phones) */
 @media (max-width: 480px) {
     header {
         padding: 8px 0;
     }
     main {
-        margin-top: 70px; /* Adjust if header height changes */
+        margin-top: 70px;
         padding: 10px;
     }
     #hero h1 {
@@ -482,7 +460,6 @@ footer {
         font-size: 1.1em;
     }
 
-    /* Further fine-tuning for VCE pages if needed */
     #spec-maths-resources h3,
     #physics-resources h3,
     #chem-resources h3,

@@ -1,12 +1,7 @@
-/* =============================================
-   RESEARCH SECTION STYLES
-   ============================================= */
-
-/* --- Custom Properties (Variables) --- */
 :root {
     --research-font-serif: 'Lora', serif;
     --research-font-sans: 'Poppins', sans-serif;
-    --research-accent-color: #a78bfa; /* Your site's main accent */
+    --research-accent-color: #a78bfa;
     --research-text-color: #dcdcdc;
     --research-meta-color: #aaa;
     --research-bg-light: #1e1e30;
@@ -17,7 +12,6 @@
     --status-in-progress-text: #6495ed;
 }
 
-/* --- Research List Page --- */
 #research-list {
     max-width: 800px;
     padding-top: 0;
@@ -104,10 +98,8 @@
     text-decoration: underline;
 }
 
-
-/* --- Status Badge Styling --- */
 .status-badge {
-    flex-shrink: 0; /* Prevents the badge from shrinking */
+    flex-shrink: 0;
     font-size: 0.75em;
     font-weight: bold;
     padding: 4px 10px;
@@ -128,10 +120,8 @@
     border: 1px solid var(--status-in-progress-text);
 }
 
-
-/* --- Individual Research Article Page --- */
 .research-article-container {
-    /* This adds a 60px buffer of space at the top, pushing the title down from the navbar. */
+
     margin-top: 0 !important;
     padding-top: 120px !important;
     max-width: 750px;
@@ -168,9 +158,9 @@
     font-family: var(--research-font-sans);
     margin-top: 2em;
     margin-bottom: 0.8em;
-    color: #e0e0e0; /* White text color from your blog's style */
-    border-bottom: 1px solid #555; /* The line underneath */
-    padding-bottom: 0.3em; /* Space between text and the line */
+    color: #e0e0e0;
+    border-bottom: 1px solid #555;
+    padding-bottom: 0.3em;
 }
 
 .research-content a {
@@ -190,14 +180,12 @@
 
 .research-content .heading-anchor-link {
     position: absolute;
-    /* This positions the anchor outside and to the left of the heading */
-    left: -1.2em;
-    top: 0.1em; /* Adjust for vertical alignment */
 
-    /* Ensure no other margins are interfering */
+    left: -1.2em;
+    top: 0.1em;
+
     margin-left: 0;
 
-    /* Keep it subtle until hovered */
     opacity: 0;
     transition: opacity 0.2s ease;
 }
@@ -212,34 +200,23 @@
     opacity: 1;
 }
 
-/* --- Two-Column Layout & Sticky Sidebar for Articles --- */
 .page-with-left-sidebar .page-content-main {
     max-width: none;
 }
 
 .page-with-left-sidebar {
     display: grid;
-    /* This creates 5 columns to precisely control the layout:
-       1. Flexible empty space on the left
-       2. The TOC sidebar
-       3. The gap between the TOC and content
-       4. The main content
-       5. Flexible empty space on the right
-    */
+
     grid-template-columns: 1fr 250px 80px 1100px 1fr;
 }
 
 .sticky-toc {
-    position: -webkit-sticky; /* For Safari compatibility */
+    position: -webkit-sticky;
     position: sticky;
-    /* This tells the TOC to "stick" 120px from the top of the screen,
-       which should clear your main navigation bar. Adjust if needed. */
+
     top: 250px;
 }
 
-/* --- Styling for TOC Links Inside the Sidebar --- */
-
-/* Removes the default bullet points and spacing */
 .sticky-toc nav.toc ul {
     list-style: none;
     padding-left: 0;
@@ -250,26 +227,22 @@
     margin: 0;
 }
 
-/* Styles for each link in the TOC */
 .sticky-toc nav.toc a {
     display: block;
     padding: 10px 15px;
     border-radius: 4px;
-    color: var(--research-meta-color); /* Softer text color */
+    color: var(--research-meta-color);
     text-decoration: none;
     font-size: 0.9em;
-    border-left: 3px solid transparent; /* A subtle indicator for the active link */
+    border-left: 3px solid transparent;
     transition: all 0.2s ease-in-out;
 }
 
-/* Style for when you hover over a link */
 .sticky-toc nav.toc a:hover {
     color: var(--research-text-color);
     background-color: rgba(167, 139, 250, 0.1);
 }
 
-/* Style for the link of the section you are currently viewing */
-/* (Note: This will require JavaScript to activate, but the style will be ready) */
 .sticky-toc nav.toc a.active {
     color: var(--research-accent-color);
     font-weight: bold;
@@ -283,17 +256,16 @@
 
 .page-content-main {
     grid-column: 4;
-    max-width: none; /* We control width with the grid now */
+    max-width: none;
 }
 
 .sticky-toc .heading-anchor-link {
     display: none;
 }
 
-/* --- Responsive styles for smaller screens --- */
 @media (max-width: 1200px) {
     .page-with-left-sidebar {
-        display: block; /* Revert to a normal, single-column flow */
+        display: block;
     }
 
     .page-sidebar {
@@ -302,13 +274,10 @@
     }
 
     .sticky-toc {
-        position: static; /* Disable sticky positioning */
+        position: static;
     }
 }
-/* --- Final Fix for Expanding Content --- */
 
-/* This selects the main container ONLY on the research article page
-   and removes its max-width, allowing our grid to use the full space. */
 main:has(.page-with-left-sidebar) {
     max-width: none;
 }
