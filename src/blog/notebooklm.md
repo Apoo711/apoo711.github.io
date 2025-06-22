@@ -78,3 +78,5 @@ What started as a collection of separate files became a single, intelligent, and
 NotebookLM is one of the most practical applications of AI for education I've seen. It's a powerful tool that shifts the focus from the grunt work of organising information to the more important work of understanding it.
 
 By creating a personalised, interactive expert on your own VCE subjects, it helps you study smarter, not just harder. If you're looking to get an edge in your revision and make sense of the mountain of content you have to learn, I highly recommend giving NotebookLM a try.
+
+---
