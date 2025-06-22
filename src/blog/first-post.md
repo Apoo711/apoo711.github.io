@@ -125,3 +125,5 @@ This is just version 1.0! I have a list of ideas and improvements I’d love to 
 - Adding more interactive study tools or checklists.
 
 - Perhaps a dedicated section for VCE news and exam tips.
+
+---
