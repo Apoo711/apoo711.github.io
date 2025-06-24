@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Visualizing Thought: The Story Behind Obsidian&#39;s 3D Graph Plugin</title>
+    <link rel="stylesheet" href="/css/okaidia.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/navigation.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/research.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" ... />
+</head>
+<body>
+    <div id="tsparticles"></div>
+    <header>
+        <nav>
+            <div class="logo"><a href="/">AG</a></div>
+            <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+                <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hamburger-svg-icon">
+                    <path class="line-top" d="M5 7H19" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                    <path class="line-middle" d="M5 12H19" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                    <path class="line-bottom" d="M5 17H19" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <ul class="nav-links">
+            <li>
+                <a href="/index.html#about">
+                    <svg viewBox="0 0 24 24" class="nav-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12,11A5,5,0,1,0,7,6,5.006,5.006,0,0,0,12,11Zm0-8A3,3,0,1,1,9,6,3,3,0,0,1,12,3ZM3,22a9,9,0,0,1,18,0,1,1,0,0,1-2,0A7,7,0,0,0,5,22a1,1,0,0,1-2,0Z"/>
+                    </svg>
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="/vce/">
+                    <svg viewBox="0 0 24 24" class="nav-icon" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 10.4V20M12 10.4C12 8.15979 12 7.03969 11.564 6.18404C11.1805 5.43139 10.5686 4.81947 9.81596 4.43597C8.96031 4 7.84021 4 5.6 4H4.6C4.03995 4 3.75992 4 3.54601 4.10899C3.35785 4.20487 3.20487 4.35785 3.10899 4.54601C3 4.75992 3 5.03995 3 5.6V16.4C3 16.9601 3 17.2401 3.10899 17.454C3.20487 17.6422 3.35785 17.7951 3.54601 17.891C3.75992 18 4.03995 18 4.6 18H7.54668C8.08687 18 8.35696 18 8.61814 18.0466C8.84995 18.0879 9.0761 18.1563 9.29191 18.2506C9.53504 18.3567 9.75977 18.5065 10.2092 18.8062L12 20M12 10.4C12 8.15979 12 7.03969 12.436 6.18404C12.8195 5.43139 13.4314 4.81947 14.184 4.43597C15.0397 4 16.1598 4 18.4 4H19.4C19.9601 4 20.2401 4 20.454 4.10899C20.6422 4.20487 20.7951 4.35785 20.891 4.54601C21 4.75992 21 5.03995 21 5.6V16.4C21 16.9601 21 17.2401 20.891 17.454C20.7951 17.6422 20.6422 17.7951 20.454 17.891C20.2401 18 19.9601 18 19.4 18H16.4533C15.9131 18 15.643 18 15.3819 18.0466C15.15 18.0879 14.9239 18.1563 14.7081 18.2506C14.465 18.3567 14.2402 18.5065 13.7908 18.8062L12 20"/>
+                    </svg>
+                    VCE Resources
+                </a>
+            </li>
+            <li>
+                <a href="/blog/">
+                    <svg class="nav-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+
+                        <path d="M6 3v1.5c1.469 0 2.85 0.572 3.889 1.611s1.611 2.42 1.611 3.889h1.5c0-3.866-3.134-7-7-7z"></path>
+                        <path d="M7.5 6l-1 1-3.5 1-3 6.5 0.396 0.396 3.638-3.638c-0.022-0.083-0.034-0.169-0.034-0.259 0-0.552 0.448-1 1-1s1 0.448 1 1-0.448 1-1 1c-0.090 0-0.176-0.012-0.259-0.034l-3.638 3.638 0.396 0.396 6.5-3 1-3.5 1-1-2.5-2.5z"></path>
+                    </svg>
+                    Blogs
+                </a>
+            </li>
+            <li>
+                <a href="/research/">
+                    <svg class="nav-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                        <path d="M16,5c0,0.552-0.448,1-1,1s-1-0.448-1-1s0.448-1,1-1S16,4.448,16,5z M7,18c-0.552,0-1,0.448-1,1 s0.448,1,1,1s1-0.448,1-1S7.552,18,7,18z M10,6.5C9.724,6.5,9.5,6.724,9.5,7S9.724,7.5,10,7.5s0.5-0.224,0.5-0.5S10.276,6.5,10,6.5z M11,11.5c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5S11.276,11.5,11,11.5z M6,9.5c-0.276,0-0.5,0.224-0.5,0.5 s0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5S6.276,9.5,6,9.5z M12.36,7c0-1.301-1.059-2.36-2.36-2.36S7.64,5.699,7.64,7 S8.699,9.36,10,9.36S12.36,8.301,12.36,7z M11.64,7c0,0.904-0.736,1.64-1.64,1.64S8.36,7.904,8.36,7S9.096,5.36,10,5.36 S11.64,6.096,11.64,7z M7.56,14.4c0-1.081-0.879-1.96-1.96-1.96s-1.96,0.879-1.96,1.96s0.879,1.96,1.96,1.96S7.56,15.48,7.56,14.4z M6.84,14.4c0,0.684-0.557,1.24-1.24,1.24s-1.24-0.557-1.24-1.24s0.557-1.24,1.24-1.24S6.84,13.716,6.84,14.4z M31.36,25.5V31 c0,0.199-0.161,0.36-0.36,0.36H9c-0.146,0-0.277-0.088-0.333-0.223s-0.025-0.289,0.078-0.393l3.667-3.666 c0.067-0.067,0.159-0.105,0.254-0.105H25.14V25.5c0-0.199,0.161-0.36,0.36-0.36h2.229c0.704-1.289,1.075-2.744,1.075-4.222 c0-3.116-1.64-5.983-4.304-7.57c-0.544,0.906-1.536,1.514-2.668,1.514c-0.525,0-1.021-0.131-1.454-0.361l-3.062,5.301 c-0.099,0.174-0.318,0.232-0.492,0.132l-1.275-0.736l-0.557,0.964l1.276,0.737c0.083,0.048,0.143,0.126,0.167,0.219 c0.025,0.092,0.012,0.19-0.036,0.272l-0.917,1.587c-0.099,0.173-0.317,0.232-0.492,0.132l-4.763-2.749 c-0.172-0.1-0.231-0.319-0.132-0.491l0.917-1.588c0.048-0.083,0.126-0.144,0.219-0.168c0.091-0.024,0.191-0.013,0.273,0.036 l1.276,0.736l0.556-0.964l-1.276-0.736c-0.083-0.048-0.143-0.126-0.167-0.218c-0.025-0.092-0.012-0.19,0.036-0.273l7.666-13.276 C17.652,2.074,15.378,1.36,13,1.36C6.582,1.36,1.36,6.582,1.36,13S6.582,24.64,13,24.64v0.721C6.185,25.36,0.64,19.815,0.64,13 S6.185,0.64,13,0.64c2.506,0,4.903,0.748,6.958,2.153l1.14-1.973c0.1-0.172,0.321-0.229,0.491-0.132l4.763,2.747 c0.083,0.048,0.144,0.126,0.168,0.219s0.012,0.19-0.036,0.273l-2.998,5.191c0.875,0.551,1.458,1.525,1.458,2.633 c0,0.326-0.051,0.64-0.145,0.936c2.923,1.708,4.727,4.832,4.727,8.23c0,1.468-0.339,2.915-0.984,4.222H31 C31.199,25.14,31.36,25.301,31.36,25.5z M12.734,19.688c-0.005-0.002-0.01-0.005-0.014-0.008l-1.262-0.729l-0.557,0.964l4.139,2.389 l0.557-0.963L12.734,19.688z M13.892,19.525l0.478,0.276l0.557-0.964l-0.964-0.557l-0.556,0.964L13.892,19.525z M19.784,14.09 c-0.65-0.57-1.062-1.407-1.062-2.338c0-1.714,1.396-3.109,3.11-3.109c0.35,0,0.687,0.058,1.001,0.165l2.846-4.929L21.54,1.492 l-8.806,15.25l1.26,0.728c0.005,0.003,0.011,0.006,0.016,0.009l1.092,0.631l1.771,1.021L19.784,14.09z M24.223,11.752 c0-1.317-1.072-2.39-2.39-2.39s-2.39,1.072-2.39,2.39c0,0.784,0.379,1.481,0.964,1.917c0.009,0.004,0.019,0.009,0.027,0.015 c0.029,0.017,0.055,0.036,0.077,0.059c0.379,0.252,0.833,0.399,1.321,0.399c0.972,0,1.81-0.583,2.183-1.417 c0.005-0.012,0.011-0.024,0.017-0.037C24.155,12.4,24.223,12.084,24.223,11.752z M30.64,25.86h-2.673 c-0.021-0.001-0.038-0.001-0.055,0H25.86v1.474c0,0.199-0.161,0.36-0.36,0.36H12.816L9.869,30.64H30.64V25.86z"/>
+                    </svg>
+                    Research
+                </a>
+            </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+<article class="blog-post-full">
+  <h1>Visualizing Thought: The Story Behind Obsidian&#39;s 3D Graph Plugin</h1>
+  
+  <p class="post-meta">
+    Published on <time datetime="2025-06-24">Jun 24, 2025</time>
+  </p>
+  
+  <hr style="border: none; border-top: 1px solid #444; margin: 30px auto; width: 70%;">
+
+    
+    
+      <aside class="toc-container" aria-labelledby="toc-heading">
+        <h2 id="toc-heading">Table of Contents</h2>
+        <nav class="toc" >
+        <ul><li><a href="#introduction:-a-new-dimension-for-your-notes"># Introduction: A New Dimension for Your Notes</a></li><li><a href="#what-is-the-3d-graph-plugin?"># What is the 3D Graph Plugin?</a></li><li><a href="#the-developer’s-journey:-how-it-was-built"># The Developer’s Journey: How It Was Built</a><ul><li><a href="#challenge-#1:-the-color-conundrum"># Challenge1: The Color Conundrum</a></li><li><a href="#challenge-#2:-from-static-to-dynamic"># Challenge2: From Static to Dynamic</a></li></ul></li><li><a href="#the-future-is-collaborative"># The Future is Collaborative</a></li></ul>
+      </nav>
+      </aside>
+    
+
+  <h2 id="introduction:-a-new-dimension-for-your-notes" tabindex="-1"><a class="heading-anchor-link" href="#introduction:-a-new-dimension-for-your-notes" aria-hidden="true">#</a> Introduction: A New Dimension for Your Notes</h2>
+<p>Every Obsidian user knows the power of the graph view. It’s a fantastic tool for seeing the connections between our notes, but as our vaults grow, so does the complexity. What if we could add another dimension to our exploration? This question was the spark that led to the creation of the <strong>3D Graph plugin for Obsidian</strong>.</p>
+<p>This post will take you on a journey through what the plugin does, how some of its most complex features were built, and why viewing your notes in 3D can unlock a new level of insight into your own knowledge base.</p>
+<h2 id="what-is-the-3d-graph-plugin?" tabindex="-1"><a class="heading-anchor-link" href="#what-is-the-3d-graph-plugin?" aria-hidden="true">#</a> What is the 3D Graph Plugin?</h2>
+<p>At its core, the 3D Graph plugin transforms your Obsidian vault from a 2D map into a living, interactive 3D universe. It renders your notes and their connections as nodes in a dynamic, force-directed graph that you can rotate, pan, and zoom through.</p>
+<p>The goal is to provide a powerful, high-level overview of your knowledge, helping you discover surprising connections, identify clusters of thought, and find forgotten, orphaned notes.</p>
+<p><img src="/images/blog/2025/06-24/hero.png" alt="A screenshot of the 3D Graph plugin showing an interactive network of notes."></p>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Live, Interactive 3D Graph</strong>: Explore your vault’s structure in a three-dimensional space.</li>
+<li><strong>Powerful Filtering</strong>: Instantly filter the graph by search terms, tags, folders, and even hide attachments or unlinked “orphan” notes.</li>
+<li><strong>Deep Customization</strong>: Use the “Groups” feature to apply custom colors to nodes based on flexible rules, and change the shape and size of different node types to create a view that makes sense to you.</li>
+<li><strong>Live Settings Panel</strong>: A floating settings panel allows you to adjust almost every aspect of the graph—from physics forces to node appearance—in real-time, without ever leaving the view.</li>
+</ul>
+<h2 id="the-developer’s-journey:-how-it-was-built" tabindex="-1"><a class="heading-anchor-link" href="#the-developer’s-journey:-how-it-was-built" aria-hidden="true">#</a> The Developer’s Journey: How It Was Built</h2>
+<p>Every feature comes with its own set of challenges. Here’s a look behind the curtain at how two of the most significant technical hurdles were overcome.</p>
+<h3 id="challenge-#1:-the-color-conundrum" tabindex="-1"><a class="heading-anchor-link" href="#challenge-#1:-the-color-conundrum" aria-hidden="true">#</a> Challenge #1: The Color Conundrum</h3>
+<p>One of the first pieces of major feedback was that the graph’s colors were breaking on certain Obsidian themes.</p>
+<p><strong>The Problem</strong>: The plugin was using a standard web function, <code>getComputedStyle</code>, to read color values from the user’s theme. However, modern CSS is incredibly flexible. Themes can define colors in many formats, from simple hex codes (<code>#ff0000</code>) to complex, calculated values like <code>color-mix(in srgb, blue 40%, white)</code> or <code>lab(64 0.01 -0.0008)</code>. The <code>getComputedStyle</code> function doesn’t always return a simple, predictable format, which caused the <code>Three.js</code> rendering engine to fail.</p>
+<p><strong>The Solution</strong>: How do you reliably find the final color of an element, no matter how it’s defined in CSS? The answer came from a clever, dependency-free browser trick: use a <strong>canvas</strong>.</p>
+<p>The refined process works like this:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">// A simplified look at the color conversion logic</span>
+<span class="token keyword">function</span> <span class="token function">getCssColor</span><span class="token punctuation">(</span><span class="token parameter">variable<span class="token punctuation">,</span> fallback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 1. Get the computed color string, e.g., "lab(64...)"</span>
+    <span class="token keyword">const</span> tempEl <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    tempEl<span class="token punctuation">.</span>style<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">var(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>variable<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>tempEl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> computedColor <span class="token operator">=</span> <span class="token function">getComputedStyle</span><span class="token punctuation">(</span>tempEl<span class="token punctuation">)</span><span class="token punctuation">.</span>color<span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>tempEl<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 2. Use a canvas to do the conversion</span>
+    <span class="token keyword">const</span> canvas <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'canvas'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> ctx <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">// 3. The browser calculates the final color when filling</span>
+    ctx<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> computedColor<span class="token punctuation">;</span> 
+    ctx<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 4. Read the standardized RGBA value from the pixel</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">]</span> <span class="token operator">=</span> ctx<span class="token punctuation">.</span><span class="token function">getImageData</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">rgb(</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>r<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>g<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>b<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span> <span class="token comment">// e.g., "rgb(128, 0, 128)"</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This approach made the plugin instantly compatible with a much wider range of beautiful community themes.</p>
+<h3 id="challenge-#2:-from-static-to-dynamic" tabindex="-1"><a class="heading-anchor-link" href="#challenge-#2:-from-static-to-dynamic" aria-hidden="true">#</a> Challenge #2: From Static to Dynamic</h3>
+<p>Initially, all settings lived in Obsidian’s main settings area. While functional, it was a clumsy user experience. Adjusting a force or changing a node size required navigating away from the graph, making the change, and returning. It broke the flow of exploration.</p>
+<p><strong>The Problem:</strong> How do you create a settings experience that is immediate, interactive, and doesn’t require a full graph reload for every minor tweak?</p>
+<p><strong>The Solution:</strong> The answer was to build a second, “local” settings panel directly inside the graph view itself.</p>
+<p><img src="/images/blog/2025/06-24/settings-panel.png" alt="A screenshot showing the Live Settings Panel open within the 3D Graph view."></p>
+<ol>
+<li><strong>UI Construction:</strong> Using Obsidian’s built-in UI components (<code>Setting</code>, <code>addSlider</code>, <code>addToggle</code>, etc.), a floating panel was constructed dynamically when the view opens.</li>
+<li><strong>Instantaneous Updates:</strong> Each control in this new panel is wired directly to update specific aspects of the graph. For example:
+<ul>
+<li>Changing a <strong>force slider</strong> directly calls the <code>d3Force</code> update methods.</li>
+<li>Adjusting a <strong>size slider</strong> or <strong>shape dropdown</strong> triggers a display update that re-renders the node objects without recalculating the entire graph layout.</li>
+</ul>
+</li>
+<li><strong>Performance Matters:</strong> To ensure these real-time updates remained fast, a simple caching system was added. For repeated operations like looking up theme colors during a single render, the result is stored after the first lookup and reused, preventing redundant calculations on large graphs.</li>
+</ol>
+<h2 id="the-future-is-collaborative" tabindex="-1"><a class="heading-anchor-link" href="#the-future-is-collaborative" aria-hidden="true">#</a> The Future is Collaborative</h2>
+<p>The 3D Graph plugin is a continuing exploration, driven by the needs and ideas of the Obsidian community. There is always more to improve and new features to imagine.</p>
+<p>If you’re interested in visualizing your notes in a new way, I encourage you to install the plugin and give it a try. For a deeper dive into the code, to report an issue, or even to contribute your own ideas and improvements, check out the project on GitHub. Your feedback is invaluable in shaping the future of this tool.</p>
+<p><a href="https://github.com/Apoo711/obsidian-3d-graph"><strong>Github Repository</strong></a> - Don’t forget to leave a star!</p>
+<p>Thank you for reading, and happy exploring!</p>
+<hr>
+
+</article>
+
+<p style="margin-top: 40px; text-align: center;">
+  <a href="/blog/">&larr; Back to Blog List</a> 
+</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aryan Gupta. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="/js/particles-config.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
