@@ -3,59 +3,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://aryan-gupta.is-a.dev/</loc>
-    <lastmod>2025-06-22T10:36:38+01:00</lastmod>
+    <lastmod>2025-07-01T08:54:09+01:00</lastmod>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/obsidian-discordrpc-preview.png</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/ayano-bot-preview.png</image:loc>
-    </image:image>
     <image:image>
       <image:loc>https://aryan-gupta.is-a.dev/images/favicon-32x32.png</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://aryan-gupta.is-a.dev/images/3d-graph-plugin-icon.png</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://aryan-gupta.is-a.dev/images/obsidian-discordrpc-preview.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://aryan-gupta.is-a.dev/images/ayano-bot-preview.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/</loc>
-    <lastmod>2025-06-22T10:36:38+01:00</lastmod>
+    <lastmod>2025-07-01T08:54:09+01:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/blog/</loc>
-    <lastmod>2025-06-22T10:36:38+01:00</lastmod>
+    <lastmod>2025-07-01T08:54:09+01:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/research/</loc>
-    <lastmod>2025-06-22T10:36:38+01:00</lastmod>
+    <lastmod>2025-07-01T08:54:09+01:00</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/index.html</loc>
-    <lastmod>2025-06-22T10:36:38+01:00</lastmod>
+    <lastmod>2025-07-01T08:54:10+01:00</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/spec-maths/</loc>
-    <lastmod>2025-06-22T10:36:38+01:00</lastmod>
+    <lastmod>2025-07-01T08:54:10+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/chem/</loc>
-    <lastmod>2025-06-22T10:36:38+01:00</lastmod>
+    <lastmod>2025-07-01T08:54:10+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/eng/</loc>
-    <lastmod>2025-06-22T10:36:38+01:00</lastmod>
+    <lastmod>2025-07-01T08:54:10+01:00</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://aryan-gupta.is-a.dev/blog/2025/3d-graph-plugin/</loc>
+    <lastmod>2025-07-01T08:54:11+01:00</lastmod>
+    <priority>0.4</priority>
+    <image:image>
+      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/06-24/hero.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/06-24/settings-panel.png</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://aryan-gupta.is-a.dev/blog/2025/notebooklm/</loc>
-    <lastmod>2025-06-22T10:36:39+01:00</lastmod>
+    <lastmod>2025-07-01T08:54:11+01:00</lastmod>
     <priority>0.4</priority>
     <image:image>
       <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/06-22/dashboard.png</image:loc>
@@ -72,7 +83,7 @@
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/blog/2025/compact-gui-deep-dive/</loc>
-    <lastmod>2025-06-22T10:36:39+01:00</lastmod>
+    <lastmod>2025-07-01T08:54:11+01:00</lastmod>
     <priority>0.4</priority>
     <image:image>
       <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/05-25/compact-gui-main.png</image:loc>
@@ -89,7 +100,7 @@
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/blog/2025/first-post/</loc>
-    <lastmod>2025-06-22T10:36:39+01:00</lastmod>
+    <lastmod>2025-07-01T08:54:11+01:00</lastmod>
     <priority>0.4</priority>
     <image:image>
       <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/05-16/welcome.png</image:loc>
@@ -103,12 +114,12 @@
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/research/2025/spanish-inquisition/</loc>
-    <lastmod>2025-06-22T10:36:40+01:00</lastmod>
+    <lastmod>2025-07-01T08:54:12+01:00</lastmod>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/physics/</loc>
-    <lastmod>2025-06-22T10:36:40+01:00</lastmod>
+    <lastmod>2025-07-01T08:54:12+01:00</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>
