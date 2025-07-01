@@ -8,6 +8,8 @@ tags:
   - research
 status: "In Progress"
 lastUpdated: 2025-06-21 # The new field
+sitemap:
+  priority: 0.5
 ---
 
 ## Abstract

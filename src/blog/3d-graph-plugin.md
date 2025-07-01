@@ -6,6 +6,8 @@ tags:
 layout: layouts/post.njk
 excerpt: "A deep dive into the Obsidian 3D Graph plugin. Discover its core features and take a behind-the-scenes look at the technical challenges and solutions involved in its development, from solving complex CSS color issues to building a real-time settings UI."
 permalink: "/blog/{{ page.date.getFullYear() }}/{{ page.fileSlug }}/"
+sitemap:
+   priority: 0.5
 ---
 
 ## Introduction: A New Dimension for Your Notes

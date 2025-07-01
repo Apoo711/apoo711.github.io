@@ -6,6 +6,8 @@ tags:
 layout: layouts/post.njk # Tell it to use the post layout
 excerpt: "Ever wondered what goes into building a website from scratch? In my first blog post, I share the journey behind creating this VCE resource hub – from the initial idea and tech choices to the challenges faced and lessons learned along the way. Take a peek behind the scenes!"
 permalink: "/blog/{{ page.date.getFullYear() }}/{{ page.fileSlug }}/"
+sitemap:
+  priority: 0.5
 ---
 
 ## Introduction: Why Share This?
