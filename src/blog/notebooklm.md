@@ -5,6 +5,7 @@ tags:
   - post
 layout: layouts/post.njk
 excerpt: "Discover how Google's NotebookLM can transform your VCE study routine. This deep dive covers key features like the Study Guide and Mind Map creator, and walks through building a Chemistry revision notebook from scratch. Stop drowning in notes and start understanding them."
+description: "Discover how Google's NotebookLM can transform your VCE study routine by turning your notes into an interactive study guide, mind map, and audio summary."
 permalink: "/blog/{{ page.date.getFullYear() }}/{{ page.fileSlug }}/"
 sitemap:
   priority: 0.5

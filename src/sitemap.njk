@@ -1,0 +1,24 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+{%- for page in collections.all %}
+  <url>
+    <loc>https://aryan-gupta.is-a.dev{{ page.url | url }}</loc>
+    <lastmod>{{ page.date.toISOString() }}</lastmod>
+    {% if page.data.sitemap and page.data.sitemap.priority %}
+    <priority>{{ page.data.sitemap.priority }}</priority>
+    {% endif %}
+
+    {#- Find all image tags in the page's final rendered content -#}
+    {%- set images = page.content | regexFindAll('<img[^>]+src="([^"]+)"[^>]*>') %}
+    {%- for image in images %}
+    <image:image>
+      <image:loc>https://aryan-gupta.is-a.dev{{ image[1] | url }}</image:loc>
+    </image:image>
+    {%- endfor %}
+  </url>
+{%- endfor %}
+</urlset>

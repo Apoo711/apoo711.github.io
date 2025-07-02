@@ -25,3 +25,20 @@ layout: 'layouts/base.njk'
 <p style="margin-top: 40px; text-align: center;">
   <a href="/blog/">&larr; Back to Blog List</a> {# Link back to blog index #}
 </p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ title }}",
+  "description": "{{ description }}",
+  {% if image -%}
+  "image": "https://aryan-gupta.is-a.dev{{ image | url }}",
+  {%- endif %}
+  "datePublished": "{{ page.date.toISOString() }}",
+  "author": {
+    "@type": "Person",
+    "name": "Aryan Gupta"
+  }
+}
+</script>

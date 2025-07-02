@@ -3,22 +3,10 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginTOC = require('eleventy-plugin-toc');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
-const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPlugin(syntaxHighlight);
-
-    // Add the sitemap plugin with image grabbing enabled
-    eleventyConfig.addPlugin(sitemap, {
-        sitemap: {
-            hostname: "https://aryan-gupta.is-a.dev",
-        },
-        images: {
-            grab: true,
-            featuredImage: "image"
-        }
-    });
 
     eleventyConfig.setLibrary(
         'md',
@@ -43,6 +31,14 @@ module.exports = function(eleventyConfig) {
         wrapperClass: 'toc',
         ul: true,
         flat: false
+    });
+
+    eleventyConfig.addFilter("regexFindAll", (content, regexString) => {
+        if (!content) {
+            return [];
+        }
+        const regex = new RegExp(regexString, "g");
+        return Array.from(content.matchAll(regex));
     });
 
     eleventyConfig.addCollection("research", function(collectionApi) {

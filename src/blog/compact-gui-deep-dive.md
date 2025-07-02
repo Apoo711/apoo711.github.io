@@ -5,6 +5,7 @@ tags:
   - post
 layout: layouts/post.njk
 excerpt: "A look into Compact-GUI, an open-source application that utilizes Windows' CompactOS feature to help reduce the disk space occupied by games and programs. This post covers its functionality, my experience, and how to use it."
+description: "Learn how Compact-GUI uses Windows' built-in features to shrink game and application files, saving you disk space with minimal performance impact."
 permalink: "/blog/{{ page.date.getFullYear() }}/{{ page.fileSlug }}/"
 sitemap:
   priority: 0.5
