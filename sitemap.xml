@@ -75,23 +75,36 @@
     </image:image>
   </url>
   <url>
+    <loc>https://aryan-gupta.is-a.dev/blog/2025/context-engineering/</loc>
+    <lastmod>2025-07-07T00:00:00.000Z</lastmod>
+    
+    <priority>0.5</priority>
+    
+    <image:image>
+      <image:loc>https://aryan-gupta.is-a.dev/images/context-engineering-icon.png</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://aryan-gupta.is-a.dev/blog/</loc>
-    <lastmod>2025-07-02T01:42:51.876Z</lastmod>
+    <lastmod>2025-07-07T07:30:22.972Z</lastmod>
     
     <priority>0.8</priority>
     
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/</loc>
-    <lastmod>2025-07-02T01:42:51.882Z</lastmod>
+    <lastmod>2025-07-07T07:30:22.978Z</lastmod>
     
     <priority>1</priority>
     
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/favicon-32x32.png</image:loc>
+      <image:loc>https://aryan-gupta.is-a.dev/images/context-engineering-icon.png</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://aryan-gupta.is-a.dev/images/3d-graph-plugin-icon.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://aryan-gupta.is-a.dev/images/favicon-32x32.png</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://aryan-gupta.is-a.dev/images/obsidian-discordrpc-preview.png</image:loc>
@@ -102,36 +115,36 @@
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/research/</loc>
-    <lastmod>2025-07-02T01:42:51.883Z</lastmod>
+    <lastmod>2025-07-07T07:30:22.979Z</lastmod>
     
     <priority>0.8</priority>
     
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/chem/</loc>
-    <lastmod>2025-07-02T01:42:51.883Z</lastmod>
+    <lastmod>2025-07-07T07:30:22.979Z</lastmod>
     
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/eng/</loc>
-    <lastmod>2025-07-02T01:42:51.883Z</lastmod>
+    <lastmod>2025-07-07T07:30:22.979Z</lastmod>
     
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/</loc>
-    <lastmod>2025-07-02T01:42:51.883Z</lastmod>
+    <lastmod>2025-07-07T07:30:22.979Z</lastmod>
     
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/physics/</loc>
-    <lastmod>2025-07-02T01:42:51.883Z</lastmod>
+    <lastmod>2025-07-07T07:30:22.980Z</lastmod>
     
     <priority>0.6</priority>
     
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/spec-maths/</loc>
-    <lastmod>2025-07-02T01:42:51.883Z</lastmod>
+    <lastmod>2025-07-07T07:30:22.980Z</lastmod>
     
     <priority>0.6</priority>
     
