@@ -35,7 +35,7 @@ To make this discipline practical and repeatable, I created the **Gemini Context
 
 Its mission is simple: to provide a structured, repeatable workflow for building software with Gemini, elevating it from a simple tool to a true development partner.
 
-![Blueprint and Gem Icon](/images/context-engineering-icon.png)
+![Blueprint and Gem Icon](/images/blog/2025/07-07/context-engineering-icon.png)
 
 ## How It Works: The Two-Step Workflow
 
