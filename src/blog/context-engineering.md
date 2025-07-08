@@ -43,6 +43,7 @@ The framework's power lies in its two-step process, which separates high-level p
 
 **Step 1: The Blueprint (Generation)**
 First, you don't just ask the AI to write code. You start by creating a feature request and running the `generate-prp.sh` script. This script sends your request to Gemini and asks it to act as a senior engineer, creating a detailed technical plan, or a **Product Requirements Prompt (PRP)**. This forces the AI to think through the entire problem before writing a single line of code.
+
 **Step 2: The Build (The AI Agent)**
 This is where the magic happens. Once you have the PRP, you kick off the `execute-prp.sh script`. This script is a true **AI agent** that manages the entire development process for you:
 
