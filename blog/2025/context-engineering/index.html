@@ -108,8 +108,8 @@
 <h2 id="how-it-works:-the-two-step-workflow" tabindex="-1"><a class="heading-anchor-link" href="#how-it-works:-the-two-step-workflow" aria-hidden="true">#</a> How It Works: The Two-Step Workflow</h2>
 <p>The framework’s power lies in its two-step process, which separates high-level planning from automated implementation.</p>
 <p><strong>Step 1: The Blueprint (Generation)</strong>
-First, you don’t just ask the AI to write code. You start by creating a feature request and running the <code>generate-prp.sh</code> script. This script sends your request to Gemini and asks it to act as a senior engineer, creating a detailed technical plan, or a <strong>Product Requirements Prompt (PRP)</strong>. This forces the AI to think through the entire problem before writing a single line of code.
-<strong>Step 2: The Build (The AI Agent)</strong>
+First, you don’t just ask the AI to write code. You start by creating a feature request and running the <code>generate-prp.sh</code> script. This script sends your request to Gemini and asks it to act as a senior engineer, creating a detailed technical plan, or a <strong>Product Requirements Prompt (PRP)</strong>. This forces the AI to think through the entire problem before writing a single line of code.</p>
+<p><strong>Step 2: The Build (The AI Agent)</strong>
 This is where the magic happens. Once you have the PRP, you kick off the <code>execute-prp.sh script</code>. This script is a true <strong>AI agent</strong> that manages the entire development process for you:</p>
 <ol>
 <li>It sends the detailed PRP to Gemini to get a step-by-step implementation plan.</li>
