@@ -39,15 +39,18 @@ Its mission is simple: to provide a structured, repeatable workflow for building
 
 ## How It Works: The Two-Step Workflow
 
-The framework's power lies in its simple but effective two-step process, which separates planning from implementation.
+The framework's power lies in its two-step process, which separates high-level planning from automated implementation.
 
 **Step 1: The Blueprint (Generation)**
-First, you don't just ask the AI to write code. You start by running the `generate-prp.sh` script with a simple feature request. This script asks Gemini to act as a senior engineer and create a detailed technical plan, or a **Product Requirements Prompt (PRP)**. This plan includes a proposed file structure, a task breakdown, and even a validation plan. The AI is forced to think through the entire problem *before* writing a single line of code.
+First, you don't just ask the AI to write code. You start by creating a feature request and running the `generate-prp.sh` script. This script sends your request to Gemini and asks it to act as a senior engineer, creating a detailed technical plan, or a **Product Requirements Prompt (PRP)**. This forces the AI to think through the entire problem before writing a single line of code.
+**Step 2: The Build (The AI Agent)**
+This is where the magic happens. Once you have the PRP, you kick off the `execute-prp.sh script`. This script is a true **AI agent** that manages the entire development process for you:
 
-**Step 2: The Build (Execution)**
-Once you have this detailed blueprint, you kick off the `execute-prp.sh` script. This takes the comprehensive PRP and gives it back to Gemini with a clear instruction: "Build this." Because all the research, planning, and context gathering is already done, the AI can focus entirely on executing the plan and writing clean, correct code that fits perfectly into your project.
+1. It sends the detailed PRP to Gemini to get a step-by-step implementation plan.
+2. It **parses** the AI's response, identifying shell commands to run and code files to create.
+3. It then executes this plan step-by-step, **pausing to ask for your confirmation** before running any command or writing any file.
 
-This separation of planning from implementation is the key. It prevents the AI from making "good guesses" and ensures it follows a pre-approved, context-aware plan every time.
+This allows you to sit back and supervise as the AI builds the entire feature for you, right in your local terminal, with you in complete control.
 
 ## Why This is a Game-Changer for Gemini Users
 
@@ -66,18 +69,32 @@ You can find the complete open-source project on GitHub.
 [Source code](https://github.com/Apoo711/context-engineering-gemini)
 
 Getting started is simple:
-```bash
-# 1. Clone the repository
+
+**1. Clone the repository and follow the setup instructions in the README.md to configure your API key.**
+```shell
 git clone https://github.com/Apoo711/context-engineering-gemini
+```
 
-# 2. Define your feature in INITIAL.md
-# ...
+**2. Create a feature request by copying INITIAL.md to a new file named request.md and filling it out.**
 
-# 3. Generate the plan
-./.gemini/scripts/generate-prp.sh INITIAL.md
+**3. Generate the plan**
+```shell
+# On macOS/Linux
+chmod +x .gemini/scripts/generate-prp.sh
+./.gemini/scripts/generate-prp.sh request.md
 
-# 4. Execute the plan
-./.gemini/scripts/execute-prp.sh PRPs/initial_prp.md
+# On Windows
+bash ./.gemini/scripts/generate-prp.sh request.md
+```
+
+**4. Execute the plan**
+```shell
+# On macOS/Linux
+chmod +x .gemini/scripts/execute-prp.sh
+./.gemini/scripts/execute-prp.sh PRPs/request_prp.md
+
+# On Windows
+bash ./.gemini/scripts/execute-prp.sh PRPs/request_prp.md
 ```
 
 ## Conclusion: Building with an AI Partner, Not Just a Tool
