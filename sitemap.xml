@@ -86,14 +86,14 @@
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/blog/</loc>
-    <lastmod>2025-07-08T04:41:03.644Z</lastmod>
+    <lastmod>2025-07-28T13:05:03.022Z</lastmod>
     
     <priority>0.8</priority>
     
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/</loc>
-    <lastmod>2025-07-08T04:41:03.651Z</lastmod>
+    <lastmod>2025-07-28T13:05:03.029Z</lastmod>
     
     <priority>1</priority>
     
@@ -115,38 +115,45 @@
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/research/</loc>
-    <lastmod>2025-07-08T04:41:03.651Z</lastmod>
+    <lastmod>2025-07-28T13:05:03.029Z</lastmod>
     
     <priority>0.8</priority>
     
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/chem/</loc>
-    <lastmod>2025-07-08T04:41:03.651Z</lastmod>
+    <lastmod>2025-07-28T13:05:03.029Z</lastmod>
+    
+    <priority>0.6</priority>
     
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/eng/</loc>
-    <lastmod>2025-07-08T04:41:03.651Z</lastmod>
+    <lastmod>2025-07-28T13:05:03.029Z</lastmod>
+    
+    <priority>0.6</priority>
     
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/</loc>
-    <lastmod>2025-07-08T04:41:03.652Z</lastmod>
+    <lastmod>2025-07-28T13:05:03.029Z</lastmod>
+    
+  </url>
+  <url>
+    <loc>https://aryan-gupta.is-a.dev/vce/math-methods/</loc>
+    <lastmod>2025-07-28T13:05:03.029Z</lastmod>
     
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/physics/</loc>
-    <lastmod>2025-07-08T04:41:03.652Z</lastmod>
+    <lastmod>2025-07-28T13:05:03.030Z</lastmod>
     
     <priority>0.6</priority>
     
   </url>
   <url>
     <loc>https://aryan-gupta.is-a.dev/vce/spec-maths/</loc>
-    <lastmod>2025-07-08T04:41:03.652Z</lastmod>
-    
-    <priority>0.6</priority>
+    <lastmod>2025-07-28T13:05:03.030Z</lastmod>
     
   </url>
 </urlset>

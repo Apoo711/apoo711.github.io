@@ -121,17 +121,11 @@ footer {
     z-index: 1;
 }
 
-#spec-maths-resources,
-#physics-resources,
-#chem-resources,
-#eng-resources {
+#resource-section {
     padding-bottom: 30px;
 }
 
-#spec-maths-resources > p:first-of-type,
-#physics-resources > p:first-of-type,
-#chem-resources > p:first-of-type,
-#eng-resources > p:first-of-type {
+#resource-section > p:first-of-type {
     text-align: center;
     margin-bottom: 30px;
     max-width: 650px;
@@ -141,20 +135,14 @@ footer {
     font-size: 0.95em;
 }
 
-#spec-maths-resources hr,
-#physics-resources hr,
-#chem-resources hr,
-#eng-resources hr {
+#resource-section hr {
     border: none;
     border-top: 1px solid #444;
     margin: 40px auto;
     width: 70%;
 }
 
-#spec-maths-resources h3,
-#physics-resources h3,
-#chem-resources h3,
-#eng-resources h3 {
+#resource-section h3 {
     color: #e0e0e0;
     margin-top: 35px;
     margin-bottom: 15px;
@@ -164,10 +152,7 @@ footer {
     font-size: 1.3em;
 }
 
-#spec-maths-resources h3:first-of-type,
-#physics-resources h3:first-of-type,
-#chem-resources h3:first-of-type,
-#eng-resources h3:first-of-type {
+#resource-section h3:first-of-type {
     margin-top: 0;
 }
 
@@ -325,10 +310,7 @@ footer {
     h3 {
         font-size: 1.3em;
     }
-    #spec-maths-resources h3,
-    #physics-resources h3,
-    #chem-resources h3,
-    #eng-resources h3 {
+    #resource-section h3 {
         font-size: 1.2em;
     }
 }
@@ -387,27 +369,18 @@ footer {
         font-size: 1.2em;
     }
 
-    #spec-maths-resources > p:first-of-type,
-    #physics-resources > p:first-of-type,
-    #chem-resources > p:first-of-type,
-    #eng-resources > p:first-of-type {
+    #resource-section > p:first-of-type {
         margin-bottom: 20px;
         font-size: 0.9em;
         line-height: 1.5;
     }
 
-    #spec-maths-resources hr,
-    #physics-resources hr,
-    #chem-resources hr,
-    #eng-resources hr {
+    #resource-section hr {
         margin: 30px auto;
         width: 80%;
     }
 
-    #spec-maths-resources h3,
-    #physics-resources h3,
-    #chem-resources h3,
-    #eng-resources h3 {
+    #resource-section h3 {
         font-size: 1.1em;
         margin-top: 25px;
         margin-bottom: 10px;
@@ -460,10 +433,7 @@ footer {
         font-size: 1.1em;
     }
 
-    #spec-maths-resources h3,
-    #physics-resources h3,
-    #chem-resources h3,
-    #eng-resources h3 {
+    #resource-section h3 {
         font-size: 1.0em;
     }
     .resource-list li {
