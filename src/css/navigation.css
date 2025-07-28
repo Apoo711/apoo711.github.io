@@ -38,6 +38,14 @@ header nav ul.nav-links li a {
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
+/* Style for the active navigation link */
+header nav ul.nav-links li a.active {
+    color: #a78bfa;
+    font-weight: 700;
+    cursor: default;
+}
+
+
 .nav-icon {
     width: 1.3em;
     height: 1.3em;
@@ -60,9 +68,10 @@ header nav ul.nav-links li a {
     vertical-align: middle;
 }
 
-header nav ul.nav-links li a:hover {
+header nav ul.nav-links li a:not(.active):hover {
     color: #a78bfa;
 }
+
 
 .mobile-nav-toggle {
     display: none;

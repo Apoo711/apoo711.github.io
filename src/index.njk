@@ -1,0 +1,124 @@
+---
+layout: layouts/base.njk
+title: Apoo711 - Portfolio
+description: "Welcome to the portfolio of Aryan Gupta, a VCE student and creator. Explore my software projects, browse VCE study resources, and read my latest blog posts."
+sitemap:
+  priority: 1.0
+---
+
+<main>
+    <section id="hero">
+        <h1>Aryan Gupta</h1>
+        <p>VCE Student & Creator</p>
+        <p>Welcome to my personal space where I showcase my projects and share helpful resources.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hi there! I'm Aryan (Apoo711), currently a VCE student based in Australia with a strong passion for
+            technology. I enjoy learning how things work, building cool stuff with code, and especially tackling <b>the challenge of solving complex problems.</b>
+
+        </p>
+        <br>
+        <p>
+            As I navigate my VCE studies, focusing on subjects like Specialist, Physics, and Chemistry, I find myself creating various notes and cheatsheets.
+            Believing that sharing knowledge is beneficial, I decided to make some of these resources available here – hopefully, they can help other students too! While I haven't focused heavily on starting new coding projects recently,
+            I have a particular interest in <b>exploring and sometimes reviving abandoned open-source projects</b> to understand how they work.
+            Building this portfolio site is currently helping me refresh my foundational web skills (HTML, CSS, JavaScript).
+        </p>
+        <br>
+
+        <h3>Skills</h3>
+
+        <details class="skill-category">
+            <summary>Programming & Development</summary>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Python</li>
+                <li>Javascript</li>
+                <li>Rust</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </details>
+
+        <details class="skill-category">
+            <summary>Other Skills & Interests</summary>
+            <ul>
+                <li>Problem Solving</li>
+                <li>Note-Taking</li>
+                <li>Physics</li>
+                <li>Maths</li>
+                <li>Excel</li>
+            </ul>
+        </details>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <p>Here's a selection of my projects.</p>
+
+        <div class="project-slider-container">
+            <div class="project-slider">
+                <div class="project-item">
+                    <img src="/images/context-engineering-icon.png" alt="Context Engineering for Gemini" class="project-image">
+                    <h3>Context Engineering for Gemini</h3>
+                    <p>A framework for providing structured context to Google Gemini, leading to more reliable and accurate AI-generated code.</p>
+                    <div class="project-links"><a href="https://github.com/Apoo711/context-engineering-gemini" target="_blank" rel="noopener noreferrer">Source Code</a></div>
+                    <div class="project-tags"><span>Generative AI</span><span>Context Engineering</span><span>Gemini</span><span>Developer Tools</span><span>Python</span></div>
+                </div>
+                <div class="project-item">
+                    <img src="/images/3d-graph-plugin-icon.png" alt="Obsidian 3D Graph Plugin" class="project-image">
+                    <h3>Obsidian 3D Graph Plugin</h3>
+                    <p>Visualize your Vault in 3D with a powerful, highly customizable, and filterable graph.</p>
+                    <div class="project-links"><a href="https://github.com/Apoo711/obsidian-3d-graph" target="_blank" rel="noopener noreferrer">Source Code</a></div>
+                    <div class="project-tags"><span>Obsidian</span><span>Plugin</span><span>3D</span><span>Data Visualization</span></div>
+                </div>
+                <div class="project-item">
+                    <img src="/images/favicon-32x32.png" alt="This Portfolio Website" class="project-image">
+                    <h3>This Portfolio Website</h3>
+                    <p>The personal website you are currently viewing. Built with Eleventy, HTML, CSS, and JavaScript, showcasing various projects and resources.</p>
+                    <div class="project-links"><a href="https://github.com/Apoo711/apoo711.github.io" target="_blank" rel="noopener noreferrer">Source Code</a></div>
+                    <div class="project-tags"><span>Eleventy</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                </div>
+                <div class="project-item">
+                    <img src="/images/obsidian-discordrpc-preview.png" alt="Obsidian Discord RPC Plugin" class="project-image">
+                    <h3>Discord RPC for Obsidian</h3>
+                    <p>An Obsidian plugin to display current note activity in Discord using Rich Presence. Built using TypeScript.</p>
+                    <div class="project-links"><a href="https://github.com/Apoo711/obsidian-discordrpc" target="_blank" rel="noopener noreferrer">Source Code</a></div>
+                    <div class="project-tags"><span>Obsidian</span><span>Plugin</span><span>TypeScript</span></div>
+                </div>
+                <div class="project-item inactive-project">
+                    <img src="/images/ayano-bot-preview.png" alt="Ayano Discord Bot" class="project-image">
+                    <h3>Ayano Discord Bot <span class="status-inactive">(Inactive)</span></h3>
+                    <p>A multi-functional Discord bot. Features: Moderation, Games, Utility. Developed using C#.<br><em>Please note: This project is no longer actively maintained.</em></p>
+                    <div class="project-links"><a href="https://github.com/Ayano-Discord/Ayano" target="_blank" rel="noopener noreferrer">Source Code</a></div>
+                    <div class="project-tags"><span>C#</span><span>Discord</span><span>Bot</span><span>Archived</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p>
+            You can find me on Discord and GitHub. Feel free to connect!
+        </p>
+        <div class="contact-methods">
+            <div class="contact-link-item contact-discord">
+                <i class="fa-brands fa-discord"></i> Discord: apoo711
+            </div>
+            <a href="https://github.com/Apoo711" target="_blank" rel="noopener noreferrer" class="contact-link-item">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+{# Specific scripts for the homepage slider #}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script src="js/slider.js"></script>

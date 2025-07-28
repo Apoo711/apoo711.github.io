@@ -1,0 +1,16 @@
+---
+layout: 'layouts/base.njk'
+---
+
+<main>
+    <section id="resource-section">
+        <h2>{{ title }}</h2>
+        <p>
+            {{ description }}
+        </p>
+        <hr>
+
+        {{ content | safe }}
+
+    </section>
+</main>
