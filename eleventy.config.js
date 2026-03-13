@@ -41,10 +41,6 @@ module.exports = function(eleventyConfig) {
         return Array.from(content.matchAll(regex));
     });
 
-    eleventyConfig.addCollection("research", function(collectionApi) {
-        return collectionApi.getFilteredByTag("research");
-    });
-
     eleventyConfig.addPassthroughCopy("src/css");
     eleventyConfig.addPassthroughCopy("src/js");
     eleventyConfig.addPassthroughCopy("src/images");
