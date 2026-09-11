@@ -6,7 +6,7 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 {%- for page in collections.all %}
   <url>
-    <loc>https://aryan-gupta.is-a.dev{{ page.url | url }}</loc>
+    <loc>https://apoo711.github.io{{ page.url | url }}</loc>
     <lastmod>{{ page.date.toISOString() }}</lastmod>
     {% if page.data.sitemap and page.data.sitemap.priority %}
     <priority>{{ page.data.sitemap.priority }}</priority>
@@ -16,7 +16,7 @@ eleventyExcludeFromCollections: true
     {%- set images = page.content | regexFindAll('<img[^>]+src="([^"]+)"[^>]*>') %}
     {%- for image in images %}
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev{{ image[1] | url }}</image:loc>
+      <image:loc>https://apoo711.github.io{{ image[1] | url }}</image:loc>
     </image:image>
     {%- endfor %}
   </url>

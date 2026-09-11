@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-This repository is the old version of my [website](https://aryan-gupta.is-a.dev), feel free to explore the code.
+This repository is the old version of my [website](https://apoo711.github.io), feel free to explore the code.
 
 ## 👤 Author
 
