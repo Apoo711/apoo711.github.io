@@ -1,123 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://aryan-gupta.is-a.dev/blog/2025/first-post/</loc>
+    <loc>https://apoo711.github.io/blog/2025/first-post/</loc>
     <lastmod>2025-05-16T00:00:00.000Z</lastmod>
     
     <priority>0.5</priority>
     
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/05-16/welcome.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/05-16/welcome.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/05-16/wip-blog.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/05-16/wip-blog.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/05-16/releases.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/05-16/releases.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://aryan-gupta.is-a.dev/blog/2025/compact-gui-deep-dive/</loc>
+    <loc>https://apoo711.github.io/blog/2025/compact-gui-deep-dive/</loc>
     <lastmod>2025-05-25T00:00:00.000Z</lastmod>
     
     <priority>0.5</priority>
     
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/05-25/compact-gui-main.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/05-25/compact-gui-main.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/05-25/val-results.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/05-25/val-results.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/05-25/aimlabs-results.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/05-25/aimlabs-results.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/05-25/lightroomcc-results.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/05-25/lightroomcc-results.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://aryan-gupta.is-a.dev/blog/2025/notebooklm/</loc>
+    <loc>https://apoo711.github.io/blog/2025/notebooklm/</loc>
     <lastmod>2025-06-22T00:00:00.000Z</lastmod>
     
     <priority>0.5</priority>
     
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/06-22/dashboard.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/06-22/dashboard.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/06-22/study-guide.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/06-22/study-guide.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/06-22/mindmap.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/06-22/mindmap.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/06-22/chat.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/06-22/chat.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://aryan-gupta.is-a.dev/blog/2025/3d-graph-plugin/</loc>
+    <loc>https://apoo711.github.io/blog/2025/3d-graph-plugin/</loc>
     <lastmod>2025-06-24T00:00:00.000Z</lastmod>
     
     <priority>0.5</priority>
     
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/06-24/hero.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/06-24/hero.png</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/06-24/settings-panel.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/06-24/settings-panel.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://aryan-gupta.is-a.dev/blog/2025/context-engineering/</loc>
+    <loc>https://apoo711.github.io/blog/2025/context-engineering/</loc>
     <lastmod>2025-07-07T00:00:00.000Z</lastmod>
     
     <priority>0.5</priority>
     
     <image:image>
-      <image:loc>https://aryan-gupta.is-a.dev/images/blog/2025/07-07/context-engineering-icon.png</image:loc>
+      <image:loc>https://apoo711.github.io/images/blog/2025/07-07/context-engineering-icon.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://aryan-gupta.is-a.dev/blog/</loc>
-    <lastmod>2026-08-18T08:30:48.657Z</lastmod>
+    <loc>https://apoo711.github.io/blog/</loc>
+    <lastmod>2026-09-11T11:51:57.355Z</lastmod>
     
     <priority>0.8</priority>
     
   </url>
   <url>
-    <loc>https://aryan-gupta.is-a.dev/vce/chem/</loc>
-    <lastmod>2026-08-18T08:30:48.663Z</lastmod>
+    <loc>https://apoo711.github.io/vce/chem/</loc>
+    <lastmod>2026-09-11T11:51:57.359Z</lastmod>
     
     <priority>0.6</priority>
     
   </url>
   <url>
-    <loc>https://aryan-gupta.is-a.dev/vce/eng/</loc>
-    <lastmod>2026-08-18T08:30:48.663Z</lastmod>
+    <loc>https://apoo711.github.io/vce/eng/</loc>
+    <lastmod>2026-09-11T11:51:57.359Z</lastmod>
     
     <priority>0.6</priority>
     
   </url>
   <url>
-    <loc>https://aryan-gupta.is-a.dev/vce/</loc>
-    <lastmod>2026-08-18T08:30:48.663Z</lastmod>
+    <loc>https://apoo711.github.io/vce/</loc>
+    <lastmod>2026-09-11T11:51:57.359Z</lastmod>
     
   </url>
   <url>
-    <loc>https://aryan-gupta.is-a.dev/vce/math-methods/</loc>
-    <lastmod>2026-08-18T08:30:48.663Z</lastmod>
+    <loc>https://apoo711.github.io/vce/math-methods/</loc>
+    <lastmod>2026-09-11T11:51:57.359Z</lastmod>
     
   </url>
   <url>
-    <loc>https://aryan-gupta.is-a.dev/vce/physics/</loc>
-    <lastmod>2026-08-18T08:30:48.663Z</lastmod>
+    <loc>https://apoo711.github.io/vce/physics/</loc>
+    <lastmod>2026-09-11T11:51:57.359Z</lastmod>
     
     <priority>0.6</priority>
     
   </url>
   <url>
-    <loc>https://aryan-gupta.is-a.dev/vce/spec-maths/</loc>
-    <lastmod>2026-08-18T08:30:48.663Z</lastmod>
+    <loc>https://apoo711.github.io/vce/spec-maths/</loc>
+    <lastmod>2026-09-11T11:51:57.359Z</lastmod>
     
   </url>
 </urlset>
